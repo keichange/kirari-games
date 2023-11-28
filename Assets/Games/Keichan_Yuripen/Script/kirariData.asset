@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: kirariData
   m_EditorClassIdentifier: 
   money: 0
-  satietyLevel: 0
+  satietyLevel: 4
   mood: 0

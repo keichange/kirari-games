@@ -901,7 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9ac4269b6390449a7d8d4f37f5bb73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: keiYuri_main
+  SceneName: KeiYuri_Main
 --- !u!1 &831678455
 GameObject:
   m_ObjectHideFlags: 0

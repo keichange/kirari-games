@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameSelectButton : MonoBehaviour
+public class KeiYuri_ChangeScene : MonoBehaviour
 {
     public string SceneName;
     // Start is called before the first frame update
