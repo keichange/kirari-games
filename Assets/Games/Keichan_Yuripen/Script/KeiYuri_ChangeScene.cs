@@ -20,6 +20,7 @@ public class KeiYuri_ChangeScene : MonoBehaviour
 
     public void OnClick()
     {
+        print(SceneName);
         SceneManager.LoadScene(SceneName);
     }
 }
