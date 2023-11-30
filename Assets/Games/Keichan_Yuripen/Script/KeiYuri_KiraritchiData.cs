@@ -6,31 +6,36 @@ using System.IO;
 [CreateAssetMenu(menuName = "KiraritchiData")]
 public class KeiYuri_KiraritchiData : ScriptableObject
 {
-    public SaveData saveData = new SaveData();
-    public string saveDataPath;
+    public KiraritchiData kiraritchiData = new KiraritchiData();
+    public string kiraritchiDataPath;
     private void OnEnable()
     {
-        saveDataPath = Application.dataPath + "/../savefile.json";
+        kiraritchiDataPath = Application.dataPath + "/../savefile.json";
     }
 
     public void SaveGame()
     {
-        string saveDataJson = JsonUtility.ToJson(saveData);
-        File.WriteAllText(saveDataPath, saveDataJson);
+        string kiraritchiDataJson = JsonUtility.ToJson(kiraritchiData);
+        File.WriteAllText(kiraritchiDataPath, kiraritchiDataJson);
     }
 
     public void LoadData()
     {
-        if(File.Exists(saveDataPath))
+        if(File.Exists(kiraritchiDataPath))
         {
-            string saveDataJson = File.ReadAllText(saveDataPath);
-            saveData = JsonUtility.FromJson<SaveData>(saveDataJson);
+            string kiraritchiDataJson = File.ReadAllText(kiraritchiDataPath);
+            kiraritchiData = JsonUtility.FromJson<KiraritchiData>(kiraritchiDataJson);
         }
+    }
+
+    public void addMoney(int n) 
+    {
+        //kiraritchiData;
     }
 }
 
 [System.Serializable]
-public class SaveData
+public class KiraritchiData
 {
     public int money;
     public int satietyLevel;

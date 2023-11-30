@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e86692695792dbb43aa4e1c6ababd1b1, type: 3}
   m_Name: KeiYuri_KirariData
   m_EditorClassIdentifier: 
-  saveData:
+  kiraritchiData:
     money: 0
-    satietyLevel: 4
+    satietyLevel: 0
     mood: 0
-  saveDataPath: "C:/Users/keiic/OneDrive/\u753B\u50CF/\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8/GitHub/kirari-games/Assets/../savefile.json"
+  kiraritchiDataPath: "C:/Users/keiic/OneDrive/\u753B\u50CF/\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8/GitHub/kirari-games/Assets/../savefile.json"
