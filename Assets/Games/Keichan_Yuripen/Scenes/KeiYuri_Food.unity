@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: KeiYuri_Main
+  kd: {fileID: 11400000, guid: 702cb53bc7fe5e044b91a5b1e049f2ec, type: 2}
 --- !u!114 &445742627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,7 +224,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 445742626}
         m_TargetAssemblyTypeName: KeiYuri_ChangeScene, Assembly-CSharp
-        m_MethodName: OnClick
+        m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
