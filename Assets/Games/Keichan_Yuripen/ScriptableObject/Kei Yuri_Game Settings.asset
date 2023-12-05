@@ -12,3 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a640a2fbbc37394cb718d392b08f20b, type: 3}
   m_Name: Kei Yuri_Game Settings
   m_EditorClassIdentifier: 
+  tamatomoSeal:
+    favoriteSealNum: 3
+    neutralSealNum: 1
+    hatedSealNum: 0
+  wonder:
+    startPos:
+    - {x: -3.5, y: 2}
+    - {x: -1.5, y: 2}
+    - {x: 0.5, y: 2}
+    endPos:
+    - {x: -3.5, y: -2}
+    - {x: -1.5, y: -2}
+    - {x: 0.5, y: -2}
+    maxWaitTime: 1.5
+    hurueHaba: 0.05
+    speed: 2
+    img:
+    - {fileID: 21300000, guid: 29ee0ab28a214b84b865dad1ea6786a7, type: 3}
+    - {fileID: 21300000, guid: a79b54b412325454784964731e404ff7, type: 3}
+    - {fileID: 21300000, guid: 1a2ae5d44377c514eb51e8d031ab69e7, type: 3}

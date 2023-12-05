@@ -5,6 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "GameSettings")]
 public class KeiYuri_GameSettings : ScriptableObject
 {
+    public TamatomoSealSettings tamatomoSeal;
+    public WonderSettings wonder;
+}
+
+[System.Serializable]
+public class TamatomoSealSettings
+{
     public enum foods
     {
         Salmon
@@ -19,4 +26,15 @@ public class KeiYuri_GameSettings : ScriptableObject
     public int favoriteSealNum = 3;
     public int neutralSealNum = 1;
     public int hatedSealNum = 0;
+}
+
+[System.Serializable]
+public class WonderSettings
+{
+    public Vector2[] startPos;
+    public Vector2[] endPos;
+    public float maxWaitTime;
+    public float hurueHaba;
+    public float speed;
+    public Sprite[] img;
 }

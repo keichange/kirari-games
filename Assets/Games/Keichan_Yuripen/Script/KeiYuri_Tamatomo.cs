@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class KeiYuri_TamatomoData : MonoBehaviour
 {
-    public KeiYuri_GameSettings.foods favoriteFood;
-    public KeiYuri_GameSettings.foods hatedFood;
-    public KeiYuri_GameSettings gs;
+    public TamatomoSealSettings.foods favoriteFood;
+    public TamatomoSealSettings.foods hatedFood;
+    public TamatomoSealSettings tts;
 
-    public int Eat(KeiYuri_GameSettings.foods food)
+    public int Eat(TamatomoSealSettings.foods food)
     {
         if(food == favoriteFood)
         {
-            return gs.favoriteSealNum;
+            return tts.favoriteSealNum;
         }else if(food == hatedFood)
         {
-            return gs.hatedSealNum;
+            return tts.hatedSealNum;
         }
         else
         {
-            return gs.neutralSealNum;
+            return tts.neutralSealNum;
         }
     }
 
