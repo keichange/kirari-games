@@ -15,5 +15,5 @@ MonoBehaviour:
   kiraritchiData:
     money: 300
     satietyLevel: 2
-    mood: 50
+    mood: 80
   kiraritchiDataPath: "C:/Users/keiic/OneDrive/\u753B\u50CF/\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8/GitHub/kirari-games/Assets/../savefile.json"
