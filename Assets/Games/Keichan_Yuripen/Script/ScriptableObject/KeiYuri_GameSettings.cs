@@ -37,4 +37,5 @@ public class WonderSettings
     public float hurueHaba;
     public float speed;
     public Sprite[] img;
+    public Sprite[,] sampleImg = new Sprite[3,3];
 }
