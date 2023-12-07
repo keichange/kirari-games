@@ -31,16 +31,32 @@ public class TamatomoSealSettings
 [System.Serializable]
 public class WonderSettings
 {
+    public int point;
     public Vector2[] startPos;
     public Vector2[] endPos;
     public float maxWaitTime;
     public float hurueHaba;
     public float speed;
-    public OchimonoParts[] PartsList;
+    public OchimonoParts[] partsList;
 
     public OchimonoParts getParts(int n)
     {
-        return PartsList[n];
+        return partsList[n];
+    }
+
+    public int GetPoint()
+    {
+        return point;
+    }
+
+    public void AddPoint(int n)
+    {
+        point += n;
+    }
+
+    public void ResetPoint()
+    {
+        point = 0;
     }
 }
 

@@ -27,7 +27,7 @@ public class KeiYuri_OchimonoSample : MonoBehaviour
         
     }
 
-    void SetSumple()
+    public void SetSumple()
     {
         // サンプルをランダムに選び、パーツ毎にSpriteとレイヤーを設定する。
         sample = sampleList[r.Next(sampleList.Length)];
@@ -42,9 +42,9 @@ public class KeiYuri_OchimonoSample : MonoBehaviour
         }
     }
     
-    public bool CompareSample(PartsSet ps)
+    public bool CompareSample(int partsId, int n)
     {
-        return sample.CompareParts(ps);
+        return sample.CompareParts(partsId, n);
     }
 }
 
@@ -53,9 +53,9 @@ public class PartsSet
 {
     public int[] partsIDs; // bottomから昇順にパーツのIDが入る
 
-    public bool CompareParts(PartsSet ps)
+    public bool CompareParts(int partsId, int n)
     {
-        if(partsIDs == ps.partsIDs)
+        if(partsIDs[n] == partsId)
         {
             return true;
         }else

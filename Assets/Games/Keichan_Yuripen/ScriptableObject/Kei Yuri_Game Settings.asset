@@ -17,6 +17,7 @@ MonoBehaviour:
     neutralSealNum: 1
     hatedSealNum: 0
   wonder:
+    point: 14
     startPos:
     - {x: -3.5, y: 2}
     - {x: -1.5, y: 2}
@@ -28,14 +29,14 @@ MonoBehaviour:
     maxWaitTime: 1.5
     hurueHaba: 0.05
     speed: 5
-    PartsList:
+    partsList:
     - img: {fileID: 21300000, guid: 29ee0ab28a214b84b865dad1ea6786a7, type: 3}
       layer: 1
     - img: {fileID: 21300000, guid: a79b54b412325454784964731e404ff7, type: 3}
       layer: 2
     - img: {fileID: 21300000, guid: 1a2ae5d44377c514eb51e8d031ab69e7, type: 3}
       layer: 3
-    - img: {fileID: 21300000, guid: 29ee0ab28a214b84b865dad1ea6786a7, type: 3}
+    - img: {fileID: 21300000, guid: 2d044cd25d11492409c9d50dab955da3, type: 3}
       layer: 3
     - img: {fileID: 21300000, guid: 929f15f6b1fbe15489eab3965ff4d963, type: 3}
       layer: 2
