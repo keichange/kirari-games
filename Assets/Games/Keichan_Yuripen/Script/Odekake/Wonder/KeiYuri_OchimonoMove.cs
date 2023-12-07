@@ -13,7 +13,7 @@ public class KeiYuri_OchimonoMove : MonoBehaviour
     SpriteRenderer sr;
     Sprite img;
 
-    int partsId;
+    public int partsId;
     System.Random r = new System.Random();
 
     float waitTime;
