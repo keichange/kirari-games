@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class KeiYuri_OchimonoSample : MonoBehaviour
 {
+    System.Random r = new System.Random();
+    public KeiYuri_GameSettings gs;
+    WonderSettings ws;
+
     public PartsSet[] sampleList;
     public PartsSet sample;
-    public int[] sampleLayerList;
+    public OchimonoParts partsData;
     public GameObject[] partsObj;
-    public SpriteRenderer sr;
-    System.Random r = new System.Random();
+    SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
     {
+        ws = gs.wonder;
         SetSumple();
     }
 
@@ -30,22 +34,28 @@ public class KeiYuri_OchimonoSample : MonoBehaviour
         for (int i = 0; i < partsObj.Length; i++)
         {
             sr = partsObj[i].GetComponent<SpriteRenderer>();
-            sr.sprite = sample.partsSprites[i];
+            partsData = ws.getParts(sample.partsIDs[i]);
+            sr.sprite = partsData.img;
 
-            partsObj[i].transform.position = new Vector3(partsObj[i].transform.position.x, partsObj[i].transform.position.y, sample.partsLayer[i]);
+
+            partsObj[i].transform.position = new Vector3(partsObj[i].transform.position.x, partsObj[i].transform.position.y,  partsData.layer);
         }
+    }
+    
+    public bool CompareSample(PartsSet ps)
+    {
+        return sample.CompareParts(ps);
     }
 }
 
 [System.Serializable]
 public class PartsSet
 {
-    public Sprite[] partsSprites;
-    public int[] partsLayer;
+    public int[] partsIDs; // bottomÇ©ÇÁè∏èáÇ…ÉpÅ[ÉcÇÃIDÇ™ì¸ÇÈ
 
-    public bool CompareParts(Sprite[] ps)
+    public bool CompareParts(PartsSet ps)
     {
-        if(partsSprites == ps)
+        if(partsIDs == ps.partsIDs)
         {
             return true;
         }else

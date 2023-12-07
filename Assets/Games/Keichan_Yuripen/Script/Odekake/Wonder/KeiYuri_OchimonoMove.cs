@@ -13,7 +13,7 @@ public class KeiYuri_OchimonoMove : MonoBehaviour
     SpriteRenderer sr;
     Sprite img;
 
-    int randomVal;
+    int partsId;
     System.Random r = new System.Random();
 
     float waitTime;
@@ -69,8 +69,8 @@ public class KeiYuri_OchimonoMove : MonoBehaviour
     void Reset()
     {
         transform.position = ws.startPos[ochiID];
-        randomVal = r.Next(ws.img.Length);
-        sr.sprite = ws.img[randomVal];
+        partsId = r.Next(ws.PartsList.Length);
+        sr.sprite = ws.getParts(partsId).img;
         waitTime = (float)r.NextDouble()*ws.maxWaitTime;
     }
 }

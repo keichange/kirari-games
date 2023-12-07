@@ -36,6 +36,17 @@ public class WonderSettings
     public float maxWaitTime;
     public float hurueHaba;
     public float speed;
-    public Sprite[] img;
-    public Sprite[,] sampleImg = new Sprite[3,3];
+    public OchimonoParts[] PartsList;
+
+    public OchimonoParts getParts(int n)
+    {
+        return PartsList[n];
+    }
+}
+
+[System.Serializable]
+public class OchimonoParts
+{
+    public Sprite img;
+    public int layer;
 }

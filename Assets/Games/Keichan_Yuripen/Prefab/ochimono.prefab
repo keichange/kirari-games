@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4792031839227450207}
   m_Layer: 0
   m_Name: ochimono
-  m_TagString: Untagged
+  m_TagString: Ochimono
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8304795613113828348
 SpriteRenderer:
@@ -101,8 +101,10 @@ MonoBehaviour:
   ws:
     startPos: []
     endPos: []
-    waitTime: 0
+    maxWaitTime: 0
+    hurueHaba: 0
     speed: 0
+    PartsList: []
     img: []
+    imgLayer: 
   ochiID: 0
-  anim: {fileID: 0}
