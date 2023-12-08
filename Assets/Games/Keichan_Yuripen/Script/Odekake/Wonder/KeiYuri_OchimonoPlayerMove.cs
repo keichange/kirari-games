@@ -22,7 +22,7 @@ public class KeiYuri_OchimonoPlayerMove : MonoBehaviour
     public float waitTime;
 
     [SerializeField, Header("落ち物獲得時のストップイベント")]
-    private KeiYuri_WonderStopEvent wse = null;
+    private KeiYuri_WonderStopEvent stopEvent = null;
 
     [SerializeField, Header("落ち物獲得時ストップ後再開イベント")]
     private KeiYuri_WonderRestartEvent wre = null;
@@ -69,23 +69,13 @@ public class KeiYuri_OchimonoPlayerMove : MonoBehaviour
             if(sampleObj.GetComponent<KeiYuri_OchimonoSample>().CompareSample(partsId, pileNum))
             {
                 ws.AddPoint(1);
-                wse.Raise();
+                stopEvent.Raise();
                 // 見た目と位置の設定
                 sr = partsObj[pileNum].GetComponent<SpriteRenderer>();
                 sr.sprite = ws.getParts(partsId).img;   // スプライトの設定
-                collision.gameObject.transform.position += new Vector3(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y, ws.getParts(partsId).layer); // レイヤーの設定
+                partsObj[pileNum].transform.position = new Vector3(partsObj[pileNum].transform.position.x, partsObj[pileNum].transform.position.y, ws.getParts(partsId).layer); // レイヤーの設定
 
-                // 積み上がった数の変更と初期化
-                pileNum += 1;
-                if (pileNum == 3)
-                {
-                    os.SetSumple();
-                    pileNum = 0;
-                    foreach (GameObject obj in partsObj)
-                    {
-                        obj.GetComponent<SpriteRenderer>().sprite = null;
-                    }
-                }
+                
             }
             else
             {
@@ -104,6 +94,17 @@ public class KeiYuri_OchimonoPlayerMove : MonoBehaviour
     public void Restart()
     {
         move = true;
+        // 積み上がった数の変更と初期化
+        pileNum += 1;
+        if (pileNum == 3)
+        {
+            os.SetSumple();
+            pileNum = 0;
+            foreach (GameObject obj in partsObj)
+            {
+                obj.GetComponent<SpriteRenderer>().sprite = null;
+            }
+        }
     }
 
     IEnumerator WaitSecond()
