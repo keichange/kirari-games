@@ -34,9 +34,6 @@ public class WonderSettings
     public int point;
     public Vector2[] startPos;
     public Vector2[] endPos;
-    public float maxWaitTime;
-    public float hurueHaba;
-    public float speed;
     public OchimonoParts[] partsList;
 
     public OchimonoParts getParts(int n)

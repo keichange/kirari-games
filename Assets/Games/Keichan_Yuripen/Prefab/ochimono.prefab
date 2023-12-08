@@ -107,10 +107,12 @@ MonoBehaviour:
     endPos: []
     maxWaitTime: 0
     hurueHaba: 0
-    speed: 0
     partsList: []
   ochiID: 0
   partsId: 0
+  fallSpeed: 5
+  hurueHaba: 0.05
+  maxWaitTime: 1.5
 --- !u!114 &6709209534472335915
 MonoBehaviour:
   m_ObjectHideFlags: 0

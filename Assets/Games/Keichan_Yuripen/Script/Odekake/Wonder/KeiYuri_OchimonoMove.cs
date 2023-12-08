@@ -5,23 +5,31 @@ using UnityEngine.UI;
 
 public class KeiYuri_OchimonoMove : MonoBehaviour
 {
+    // 設定フィアル
     public KeiYuri_GameSettings gs;
     public WonderSettings ws;
+    System.Random r = new System.Random();
 
-    public int ochiID;
+    // 識別子
+    public int ochiID;  // オブジェクト
+    public int partsId; // Sprite
 
+    // sprite
     SpriteRenderer sr;
     Sprite img;
 
-    public int partsId;
-    System.Random r = new System.Random();
-
+    // 落ちる前
     float waitTime;
     int hurueState=0;
     int hurueDir;
 
+    // パーツ取得時のストップ管理
     bool move = true;
 
+    // 動き
+    public float fallSpeed;
+    public float hurueHaba;
+    public float maxWaitTime;
 
     // Start is called before the first frame update
 
@@ -56,14 +64,14 @@ public class KeiYuri_OchimonoMove : MonoBehaviour
                         case 3:
                             hurueDir = -1; break;
                     }
-                    transform.position += new Vector3(hurueDir * ws.hurueHaba, 0, 0);
+                    transform.position += new Vector3(hurueDir * hurueHaba, 0, 0);
                 }
             }
             else
             {
                 if(waitTime > -0.2) transform.position = new Vector3(ws.startPos[ochiID].x, transform.position.y, transform.position.z);
 
-                transform.position -= new Vector3(0, ws.speed * Time.deltaTime, 0);
+                transform.position -= new Vector3(0, fallSpeed * Time.deltaTime, 0);
             }
 
             if (transform.position.y <= ws.endPos[ochiID].y)
@@ -79,7 +87,7 @@ public class KeiYuri_OchimonoMove : MonoBehaviour
         transform.position = ws.startPos[ochiID];
         partsId = r.Next(ws.partsList.Length);
         sr.sprite = ws.getParts(partsId).img;
-        waitTime = (float)r.NextDouble()*ws.maxWaitTime;
+        waitTime = (float)r.NextDouble()*maxWaitTime;
     }
 
     public void Stop()
