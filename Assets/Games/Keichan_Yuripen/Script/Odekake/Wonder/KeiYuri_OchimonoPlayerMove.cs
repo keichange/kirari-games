@@ -74,12 +74,10 @@ public class KeiYuri_OchimonoPlayerMove : MonoBehaviour
                 sr = partsObj[pileNum].GetComponent<SpriteRenderer>();
                 sr.sprite = ws.getParts(partsId).img;   // スプライトの設定
                 partsObj[pileNum].transform.position = new Vector3(partsObj[pileNum].transform.position.x, partsObj[pileNum].transform.position.y, ws.getParts(partsId).layer); // レイヤーの設定
-
-                
             }
             else
             {
-                SceneManager.LoadScene(SceneName);
+                GameOver();
             }
         }
     }
@@ -93,6 +91,10 @@ public class KeiYuri_OchimonoPlayerMove : MonoBehaviour
 
     public void Restart()
     {
+        if(ws.point == 12)
+        {
+            GameOver();
+        }
         move = true;
         // 積み上がった数の変更と初期化
         pileNum += 1;
@@ -105,6 +107,11 @@ public class KeiYuri_OchimonoPlayerMove : MonoBehaviour
                 obj.GetComponent<SpriteRenderer>().sprite = null;
             }
         }
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene(SceneName);
     }
 
     public void GameStart()
