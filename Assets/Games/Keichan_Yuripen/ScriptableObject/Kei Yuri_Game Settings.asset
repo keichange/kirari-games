@@ -17,7 +17,7 @@ MonoBehaviour:
     neutralSealNum: 1
     hatedSealNum: 0
   wonder:
-    point: 3
+    point: 0
     startPos:
     - {x: -3.5, y: 2}
     - {x: -1.5, y: 2}
@@ -26,9 +26,6 @@ MonoBehaviour:
     - {x: -3.5, y: -2}
     - {x: -1.5, y: -2}
     - {x: 0.5, y: -2}
-    maxWaitTime: 1.5
-    hurueHaba: 0.05
-    speed: 5
     partsList:
     - img: {fileID: 21300000, guid: 29ee0ab28a214b84b865dad1ea6786a7, type: 3}
       layer: 1
@@ -41,4 +38,16 @@ MonoBehaviour:
     - img: {fileID: 21300000, guid: 929f15f6b1fbe15489eab3965ff4d963, type: 3}
       layer: 2
     - img: {fileID: 21300000, guid: 6148d4d8272637242b0c400ae23b101f, type: 3}
+      layer: 1
+    - img: {fileID: 21300000, guid: d12e0b53eb0b1dc4b9f5f6b511ed51d2, type: 3}
+      layer: 3
+    - img: {fileID: 21300000, guid: bf933cfc8c72acc488ca7705e4fae6ef, type: 3}
+      layer: 2
+    - img: {fileID: 21300000, guid: cfb3215fdf00cd64d8df9b073b70b984, type: 3}
+      layer: 1
+    - img: {fileID: 21300000, guid: 79f98aa296df0b847a1fa75566f8a4cb, type: 3}
+      layer: 3
+    - img: {fileID: 21300000, guid: 6a02d61eb27a6bd499d7410a1ceae829, type: 3}
+      layer: 2
+    - img: {fileID: 21300000, guid: 0188f31dfb1a9634cbee2dea9d5b44a5, type: 3}
       layer: 1

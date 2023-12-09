@@ -107,6 +107,11 @@ public class KeiYuri_OchimonoPlayerMove : MonoBehaviour
         }
     }
 
+    public void GameStart()
+    {
+        move = true;
+    }
+
     IEnumerator WaitSecond()
     {
         yield return new WaitForSeconds(waitTime);

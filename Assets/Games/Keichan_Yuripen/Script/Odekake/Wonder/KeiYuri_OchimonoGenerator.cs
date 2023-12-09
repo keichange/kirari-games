@@ -10,7 +10,7 @@ public class KeiYuri_OchimonoGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Generate();
+
     }
 
     void Update()
@@ -18,12 +18,19 @@ public class KeiYuri_OchimonoGenerator : MonoBehaviour
         
     }
 
-    void Generate()
+    public void GameStart()
+    {
+        StartCoroutine(Generate());
+    }
+
+    IEnumerator Generate()
     {
         for (int i = 0; i < 3; i++)
         {
             ochimono = Instantiate(ochimonoPre);
             ochimono.GetComponent<KeiYuri_OchimonoMove>().ochiID = i;
+            yield return new WaitForSeconds(0);
+
         }
     }
 }
