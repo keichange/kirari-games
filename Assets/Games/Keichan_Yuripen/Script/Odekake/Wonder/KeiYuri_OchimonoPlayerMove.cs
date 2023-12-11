@@ -57,7 +57,7 @@ public class KeiYuri_OchimonoPlayerMove : MonoBehaviour
             x--;
         }
 
-        transform.position = ws.endPos[x % 3];
+        transform.position = ws.endPos[x % ws.startPos.Length];
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -17,14 +17,16 @@ MonoBehaviour:
     neutralSealNum: 1
     hatedSealNum: 0
   wonder:
-    point: 0
+    point: 6
     startPos:
-    - {x: -3.5, y: 2}
-    - {x: -1.5, y: 2}
+    - {x: -4, y: 2}
+    - {x: -2.5, y: 2}
+    - {x: -1, y: 2}
     - {x: 0.5, y: 2}
     endPos:
-    - {x: -3.5, y: -2}
-    - {x: -1.5, y: -2}
+    - {x: -4, y: -2}
+    - {x: -2.5, y: -2}
+    - {x: -1, y: -2}
     - {x: 0.5, y: -2}
     partsList:
     - img: {fileID: 21300000, guid: 29ee0ab28a214b84b865dad1ea6786a7, type: 3}
