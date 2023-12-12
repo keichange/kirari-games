@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Games/Keichan_Yuripen/Scenes/Odekake/Wonder/KeiYuri_Od_Won_GameOver.unity
     guid: 0edd923120e01c44b968c29099b33ba7
   - enabled: 1
+    path: Assets/Games/Keichan_Yuripen/Scenes/Odekake/Wonder/KeiYuri_Od_Won_Start.unity
+    guid: 82009cc0e47f0884e9f66a820a5cda04
+  - enabled: 1
     path: Assets/Games/Keichan_Yuripen/Scenes/Odekake/KeiYuri_Od_Karaoke.unity
     guid: 4f9c50415bab2a44686c3ae8659579ad
   - enabled: 1

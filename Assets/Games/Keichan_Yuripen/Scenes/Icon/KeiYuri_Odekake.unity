@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae89b35732958724889737552c28e362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: KeiYuri_Od_Won_Play
+  SceneName: KeiYuri_Od_Won_Start
   kd: {fileID: 11400000, guid: 702cb53bc7fe5e044b91a5b1e049f2ec, type: 2}
 --- !u!114 &826543311
 MonoBehaviour:

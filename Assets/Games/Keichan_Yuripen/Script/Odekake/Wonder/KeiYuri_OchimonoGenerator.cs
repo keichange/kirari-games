@@ -13,16 +13,12 @@ public class KeiYuri_OchimonoGenerator : MonoBehaviour
     void Start()
     {
         ws = gs.wonder;
+        StartCoroutine(Generate());
     }
 
     void Update()
     {
         
-    }
-
-    public void GameStart()
-    {
-        StartCoroutine(Generate());
     }
 
     IEnumerator Generate()
@@ -32,7 +28,6 @@ public class KeiYuri_OchimonoGenerator : MonoBehaviour
             ochimono = Instantiate(ochimonoPre);
             ochimono.GetComponent<KeiYuri_OchimonoMove>().ochiID = i;
             yield return new WaitForSeconds(0);
-
         }
     }
 }
