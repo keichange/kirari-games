@@ -11,13 +11,14 @@ public class KeiYuri_OchimonoSample : MonoBehaviour
     public PartsSet[] sampleList;
     public PartsSet sample;
     public OchimonoParts partsData;
-    public GameObject[] partsObj;
+    public GameObject[] sampleObjs;
     SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
     {
         ws = gs.wonder;
+        sampleObjs = GameObject.FindGameObjectsWithTag("OchimonoSample");
         SetSumple();
     }
 
@@ -31,14 +32,8 @@ public class KeiYuri_OchimonoSample : MonoBehaviour
     {
         // サンプルをランダムに選び、パーツ毎にSpriteとレイヤーを設定する。
         sample = sampleList[r.Next(sampleList.Length)];
-        for (int i = 0; i < partsObj.Length; i++)
-        {
-            sr = partsObj[i].GetComponent<SpriteRenderer>();
-            partsData = ws.getParts(sample.partsIDs[i]);
-            sr.sprite = partsData.img;
-
-
-            partsObj[i].transform.position = new Vector3(partsObj[i].transform.position.x, partsObj[i].transform.position.y,  partsData.layer);
+        foreach(GameObject sampleObj in sampleObjs) {
+            sampleObj.GetComponent<KeiYuri_WonderSampleParts>().ChangeSample(sample.partsIDs);
         }
     }
     

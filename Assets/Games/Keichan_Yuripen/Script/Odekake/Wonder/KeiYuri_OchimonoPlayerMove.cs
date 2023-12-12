@@ -114,11 +114,6 @@ public class KeiYuri_OchimonoPlayerMove : MonoBehaviour
         SceneManager.LoadScene(SceneName);
     }
 
-    public void GameStart()
-    {
-        move = true;
-    }
-
     IEnumerator WaitSecond()
     {
         yield return new WaitForSeconds(waitTime);
