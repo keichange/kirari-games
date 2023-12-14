@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 770045930}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -746,6 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ef5dcde0b2b7d4aac43a3a63d1e2b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pileNum: 0
   partsObj:
   - {fileID: 565554662}
   - {fileID: 1391602514}
@@ -2397,7 +2398,7 @@ GameObject:
   - component: {fileID: 1735282673}
   m_Layer: 0
   m_Name: Sample
-  m_TagString: Untagged
+  m_TagString: Sample
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

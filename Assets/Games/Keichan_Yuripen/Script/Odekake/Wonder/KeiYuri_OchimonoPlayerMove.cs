@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class KeiYuri_OchimonoPlayerMove : MonoBehaviour
 {
     int x = 9999999;
-    int pileNum = 0;
+    public int pileNum = 0;
     public GameObject[] partsObj;
     public GameObject sampleObj;
 

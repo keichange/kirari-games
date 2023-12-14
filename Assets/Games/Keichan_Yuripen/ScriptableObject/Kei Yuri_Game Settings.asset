@@ -17,7 +17,7 @@ MonoBehaviour:
     neutralSealNum: 1
     hatedSealNum: 0
   wonder:
-    point: 7
+    point: 12
     startPos:
     - {x: -0.5, y: 2}
     - {x: 1, y: 2}

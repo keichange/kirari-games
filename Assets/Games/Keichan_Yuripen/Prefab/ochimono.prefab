@@ -111,6 +111,9 @@ MonoBehaviour:
   fallSpeed: 4
   hurueHaba: 0.05
   maxWaitTime: 2.5
+  probabilityOfCorrectParts: 10
+  player: {fileID: 0}
+  sample: {fileID: 0}
 --- !u!114 &6709209534472335915
 MonoBehaviour:
   m_ObjectHideFlags: 0
