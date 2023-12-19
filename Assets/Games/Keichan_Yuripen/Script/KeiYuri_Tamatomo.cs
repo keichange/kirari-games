@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class KeiYuri_TamatomoData : MonoBehaviour
 {
-    public TamatomoSealSettings.foods favoriteFood;
-    public TamatomoSealSettings.foods hatedFood;
+    public FoodSettings.Foods favoriteFood;
+    public FoodSettings.Foods hatedFood;
     public TamatomoSealSettings tts;
 
-    public int Eat(TamatomoSealSettings.foods food)
+    public int Eat(FoodSettings.Foods food)
     {
         if(food == favoriteFood)
         {

@@ -12,22 +12,19 @@ public class KeiYuri_GameSettings : ScriptableObject
 [System.Serializable]
 public class TamatomoSealSettings
 {
-    public enum foods
-    {
-        Salmon
-    }
 
     public enum place
     {
         wonder,
         karaoke
     }
-
     public int favoriteSealNum = 3;
     public int neutralSealNum = 1;
     public int hatedSealNum = 0;
 }
 
+// お出かけ
+// ワンダー
 [System.Serializable]
 public class WonderSettings
 {
@@ -62,4 +59,27 @@ public class OchimonoParts
 {
     public Sprite img;
     public int layer;
+}
+
+// ご飯
+public class FoodSettings
+{
+    public enum Foods
+    {
+        蒙古タンメン10辛,
+        パパパパパイン,
+        日本酒,
+        麻婆豆腐,
+        キムチ,
+        ラム肉,
+        餃子,
+        カントリーマアム,
+        銀だこ,
+        ピスタチオ,
+        唐揚げ,
+        ほろよい,
+        ビール,
+        親子丼,
+        カレー
+    }
 }
