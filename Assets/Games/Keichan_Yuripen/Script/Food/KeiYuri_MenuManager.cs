@@ -27,7 +27,6 @@ public class KeiYuri_MenuManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                Debug.Log("menu");
                 currentFood = (currentFood + 1) % foods.Length;
                 SetMenu();
             }
