@@ -32,7 +32,7 @@ public class KeiYuri_MenuManager : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                rm.ChangeScene(KeiYuri_RestaurantManager.Scenes.‘I‘ðŽˆ);
+                rm.ChangeScene(KeiYuri_RestaurantManager.ScenesEnum.‘I‘ðŽˆ);
             }
         }
     }
@@ -44,17 +44,5 @@ public class KeiYuri_MenuManager : MonoBehaviour
         FoodName.GetComponent<TextMeshProUGUI>().text = foodData.foodsName.ToString();
         FoodPrice.GetComponent<TextMeshProUGUI>().text = foodData.price.ToString();
         
-    }
-
-    public void ShowMenu()
-    {
-        UI.SetActive(true);
-        isShowMenu = true;
-    }
-
-    public void HideMenu()
-    {
-        UI.SetActive(false);
-        isShowMenu = false;
     }
 }

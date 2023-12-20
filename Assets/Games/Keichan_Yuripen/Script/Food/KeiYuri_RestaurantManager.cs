@@ -6,7 +6,7 @@ public class KeiYuri_RestaurantManager : MonoBehaviour
 {
     public FoodSettings.Foods[] foods;
     public GameObject[] scenes;
-    public enum Scenes
+    public enum ScenesEnum
     {
         オープニング = 0,
         シェフとの会話 = 1,
@@ -14,7 +14,7 @@ public class KeiYuri_RestaurantManager : MonoBehaviour
         選択肢 = 3,
         食事アニメーション = 4,
     }
-    private Scenes currentScene;
+    private ScenesEnum currentScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +27,7 @@ public class KeiYuri_RestaurantManager : MonoBehaviour
         
     }
 
-    public void ChangeScene(Scenes currentScene)
+    public void ChangeScene(ScenesEnum currentScene)
     {
         for(int i = 0; i < scenes.Length; i++)
         {
