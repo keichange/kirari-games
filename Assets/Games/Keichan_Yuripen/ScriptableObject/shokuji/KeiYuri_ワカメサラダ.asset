@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11a8e87e93c5892489fe0e1c93000a6e, type: 3}
-  m_Name: New Kei Yuri_Food Data
+  m_Name: "KeiYuri_\u30EF\u30AB\u30E1\u30B5\u30E9\u30C0"
   m_EditorClassIdentifier: 
-  foodsName: 8
-  sprite: {fileID: 0}
-  price: 0
+  foodsName: 16
+  sprite: {fileID: 21300000, guid: 9618d0bc8fec1b14db5c054f3fcea485, type: 3}
+  price: 48

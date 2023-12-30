@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodsName: 3
   sprite: {fileID: 21300000, guid: f2d61f71bb6cd2d4b8d640c90259aaab, type: 3}
-  price: 840
+  price: 84

@@ -6,9 +6,6 @@ using TMPro;
 
 public class KeiYuri_MenuManager : MonoBehaviour
 {
-    public int currentFood;
-    private bool isShowMenu = true;
-    public KeiYuri_FoodData[] foods;
     public KeiYuri_RestaurantManager rm;
     public GameObject UI;
     public GameObject FoodImage;
@@ -27,7 +24,7 @@ public class KeiYuri_MenuManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                currentFood = (currentFood + 1) % foods.Length;
+                NextFood();
                 SetMenu();
             }
             if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -39,10 +36,15 @@ public class KeiYuri_MenuManager : MonoBehaviour
 
     private void SetMenu()
     {
-        KeiYuri_FoodData foodData = foods[currentFood];
+        KeiYuri_FoodData foodData = rm.foods[rm.currentFood];
         FoodImage.GetComponent<Image>().sprite = foodData.sprite;
         FoodName.GetComponent<TextMeshProUGUI>().text = foodData.foodsName.ToString();
         FoodPrice.GetComponent<TextMeshProUGUI>().text = foodData.price.ToString();
         
+    }
+
+    private void NextFood()
+    {
+        rm.NextFood();
     }
 }

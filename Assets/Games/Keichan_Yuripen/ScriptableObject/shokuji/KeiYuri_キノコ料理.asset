@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11a8e87e93c5892489fe0e1c93000a6e, type: 3}
-  m_Name: "KeiYuri_\u65E5\u672C\u9152"
+  m_Name: "KeiYuri_\u30AD\u30CE\u30B3\u6599\u7406"
   m_EditorClassIdentifier: 
-  foodsName: 2
-  sprite: {fileID: 21300000, guid: 06e945bd942cfc24cb5846b265df4f64, type: 3}
-  price: 200
+  foodsName: 15
+  sprite: {fileID: 21300000, guid: 7db8bbe98253aec4880aee323fc3fee1, type: 3}
+  price: 60

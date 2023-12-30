@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class KeiYuri_RestaurantManager : MonoBehaviour
 {
-    public FoodSettings.Foods[] foods;
+    //public FoodSettings.Foods[] foods;
+    public int currentFood;
+    public KeiYuri_FoodData[] foods;
     public GameObject[] scenes;
     public enum ScenesEnum
     {
@@ -25,6 +27,11 @@ public class KeiYuri_RestaurantManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void NextFood()
+    {
+        currentFood = (currentFood + 1) % foods.Length;
     }
 
     public void ChangeScene(ScenesEnum currentScene)

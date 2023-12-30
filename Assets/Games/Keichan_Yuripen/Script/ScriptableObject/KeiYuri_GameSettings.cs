@@ -5,22 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "GameSettings")]
 public class KeiYuri_GameSettings : ScriptableObject
 {
-    public TamatomoSealSettings tamatomoSeal;
     public WonderSettings wonder;
-}
-
-[System.Serializable]
-public class TamatomoSealSettings
-{
-
-    public enum place
-    {
-        wonder,
-        karaoke
-    }
-    public int favoriteSealNum = 3;
-    public int neutralSealNum = 1;
-    public int hatedSealNum = 0;
 }
 
 // お出かけ
@@ -80,6 +65,8 @@ public class FoodSettings
         ほろよい,
         ビール,
         親子丼,
-        カレー
+        カレー,
+        キノコ料理,
+        ワカメサラダ
     }
 }

@@ -8,6 +8,8 @@ public class KeiYuri_KiraritchiData : ScriptableObject
 {
     public KiraritchiData kiraritchiData = new KiraritchiData();
     public string kiraritchiDataPath;
+    public KiraritchiFoodPreferences kiraritchiFoodPreferences = new KiraritchiFoodPreferences();
+
     private void OnEnable()
     {
         kiraritchiDataPath = Application.dataPath + "/../savefile.json";
@@ -38,9 +40,43 @@ public class KeiYuri_KiraritchiData : ScriptableObject
         kiraritchiData.satietyLevel = Mathf.Clamp(kiraritchiData.satietyLevel + n, 0, 4);
     }
 
-    public void addMood(int n)
+    public void changeMood(KiraritchiFoodPreferences.Preferences preferences)
     {
-        kiraritchiData.mood = Mathf.Clamp(kiraritchiData.mood + n, 0, 100);
+        switch (preferences)
+        {
+            case KiraritchiFoodPreferences.Preferences.çDÇ´:
+                kiraritchiData.mood = Mathf.Clamp(kiraritchiData.mood + kiraritchiFoodPreferences.favoriteChangeMood, 0, 100);
+                break;
+            case KiraritchiFoodPreferences.Preferences.åôÇ¢:
+                kiraritchiData.mood = Mathf.Clamp(kiraritchiData.mood + kiraritchiFoodPreferences.hatedChangeMood, 0, 100);
+                break;
+            case KiraritchiFoodPreferences.Preferences.ïÅí :
+                kiraritchiData.mood = Mathf.Clamp(kiraritchiData.mood + kiraritchiFoodPreferences.normalChangeMood, 0, 100);
+                break;
+        }
+        
+    }
+
+    public KiraritchiFoodPreferences.Preferences CompareFoodPreferences(FoodSettings.Foods food)
+    {
+        if (CompareFoods(food, kiraritchiFoodPreferences.favoriteFoods))
+        {
+            return KiraritchiFoodPreferences.Preferences.çDÇ´;
+        }
+        else if (CompareFoods(food, kiraritchiFoodPreferences.hatedFoods))
+        {
+            return KiraritchiFoodPreferences.Preferences.åôÇ¢;
+        }
+        return KiraritchiFoodPreferences.Preferences.ïÅí ;
+    }
+
+    private bool CompareFoods(FoodSettings.Foods comparedfood, FoodSettings.Foods[] foods)
+    {
+        foreach(FoodSettings.Foods food in foods)
+        {
+            if (food == comparedfood) return true;
+        }
+        return false;
     }
 }
 
@@ -50,4 +86,20 @@ public class KiraritchiData
     public int money;
     public int satietyLevel;
     public int mood;
+}
+
+[System.Serializable]
+public class KiraritchiFoodPreferences
+{
+    public enum Preferences
+    {
+        çDÇ´,
+        åôÇ¢,
+        ïÅí 
+    }
+    public FoodSettings.Foods[] favoriteFoods;
+    public FoodSettings.Foods[] hatedFoods;
+    public int favoriteChangeMood;
+    public int hatedChangeMood;
+    public int normalChangeMood;
 }
