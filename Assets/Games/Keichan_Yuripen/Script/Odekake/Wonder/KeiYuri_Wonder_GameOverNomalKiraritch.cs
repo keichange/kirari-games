@@ -8,7 +8,7 @@ public class KeiYuri_Wonder_ResultNomalKiraritch : MonoBehaviour
     public Sprite[] sprites;
     public float waitTime;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         StartCoroutine(Yorokobi());

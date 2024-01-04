@@ -15,6 +15,13 @@ public class KeiYuri_Fo_KiraritchiAnimation : MonoBehaviour
     [SerializeField]
     private Sprite[] normalSprites;
     private KiraritchiFoodPreferences.Preferences preferences;
+    [SerializeField]
+    private GameObject YorokobiKiraritchi;
+    [SerializeField]
+    private GameObject ChouYorokobiKiraritchi;
+
+    [SerializeField]
+    private KeiYuri_EatenFood foodScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +41,8 @@ public class KeiYuri_Fo_KiraritchiAnimation : MonoBehaviour
 
     IEnumerator EatingAnimation()
     {
+        foodScript.SetFood(em.currentFood);
+        foodScript.ChangeSprite(0);
         preferences = em.currentFoodsPreference;
         for (int i = 0; i < 3; i++)
         {
@@ -52,14 +61,44 @@ public class KeiYuri_Fo_KiraritchiAnimation : MonoBehaviour
                         break;
                 }
                 yield return new WaitForSeconds(1);
+                foodScript.ChangeSprite(i);
             }
         }
-        if(preferences == KiraritchiFoodPreferences.Preferences.Œ™‚¢)
+        switch(preferences)
         {
-            spriteRenderer.sprite = hatedSprites[2];
-            yield return new WaitForSeconds(1);
-            spriteRenderer.sprite = hatedSprites[3];
+            case KiraritchiFoodPreferences.Preferences.Œ™‚¢:
+                StartHatedAnimation();
+                break;
+            case KiraritchiFoodPreferences.Preferences.D‚«:
+                StartChouYorokobiAnimation();
+                break;
+            case KiraritchiFoodPreferences.Preferences.•’Ê:
+                StartYorokobiAnimation();
+                break;
         }
+        gameObject.SetActive(false);
+    }
+
+    private void StartHatedAnimation()
+    {
+        StartCoroutine(HatedAnimation());
+    }
+
+    private void StartYorokobiAnimation()
+    {
+        YorokobiKiraritchi.SetActive(true);
+    }
+
+    private void StartChouYorokobiAnimation()
+    {
+        ChouYorokobiKiraritchi.SetActive(true);
+    }
+
+    IEnumerator HatedAnimation()
+    {
+        spriteRenderer.sprite = hatedSprites[2];
+        yield return new WaitForSeconds(1);
+        spriteRenderer.sprite = hatedSprites[3];
     }
 
     public void NextSprite()

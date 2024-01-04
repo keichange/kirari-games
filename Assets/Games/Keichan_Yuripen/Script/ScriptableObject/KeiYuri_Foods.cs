@@ -6,6 +6,6 @@ using UnityEngine;
 public class KeiYuri_FoodData : ScriptableObject
 {
     public FoodSettings.Foods foodsName;
-    public Sprite sprite;
+    public Sprite[] sprites;
     public int price;
 }

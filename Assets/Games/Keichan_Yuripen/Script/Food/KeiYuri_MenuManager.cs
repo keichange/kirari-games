@@ -37,7 +37,7 @@ public class KeiYuri_MenuManager : MonoBehaviour
     private void SetMenu()
     {
         KeiYuri_FoodData foodData = rm.foods[rm.currentFood];
-        FoodImage.GetComponent<Image>().sprite = foodData.sprite;
+        FoodImage.GetComponent<Image>().sprite = foodData.sprites[0];
         FoodName.GetComponent<TextMeshProUGUI>().text = foodData.foodsName.ToString();
         FoodPrice.GetComponent<TextMeshProUGUI>().text = foodData.price.ToString();
         

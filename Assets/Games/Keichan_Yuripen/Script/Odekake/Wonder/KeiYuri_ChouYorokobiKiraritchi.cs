@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeiYuri_Wonder_ResultFullScoreKiraritch : MonoBehaviour
+public class KeiYuri_ChouYorokobiKiraritchi : MonoBehaviour
 {
     private SpriteRenderer sr;
     public float[] posYs;
     public Sprite[] sprites;
     public float waitTime;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     private void OnEnable()
     {
