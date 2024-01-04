@@ -9,9 +9,10 @@ public class KeiYuri_EatenFood : MonoBehaviour
     private KeiYuri_FoodData currentFoodData;
     [SerializeField]
     private KeiYuri_RestaurantManager rm;
+    System.Random r = new System.Random();
 
-    //private int countryMomsRandNum;
-    //private Random r;
+    private int countryMomsRandNum;
+    private int isCountryMom;
     // Start is called before the first frame update
     void Awake()
     {
@@ -30,12 +31,20 @@ public class KeiYuri_EatenFood : MonoBehaviour
         {
             if (foodData.foodsName == food) currentFoodData = foodData;
         }
-        //if(food == FoodSettings.Foods.カントリーマアム) 
+        if(food == FoodSettings.Foods.カントリーマアム)
+        {
+            isCountryMom = 1;
+            countryMomsRandNum = r.Next(2);
+        } else
+        {
+            isCountryMom = 0;
+        }
 
     }
 
     public void ChangeSprite(int n)
     {
+        if (countryMomsRandNum == 0) n += 1; else n += 4;
         sr.sprite = currentFoodData.sprites[n];
     }
 }

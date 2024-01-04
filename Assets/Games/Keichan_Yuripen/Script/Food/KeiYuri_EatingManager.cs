@@ -50,20 +50,4 @@ public class KeiYuri_EatingManager : MonoBehaviour
         kd.addSatietyLevel(1);
         kiraAni.StartAnimation();
     }
-
-    //IEnumerator EatingAnimation()
-    //{
-    //    for(int i = 0; i < 3; i++)
-    //    {
-    //        kiraAni.NextSprite(currentFoodsPreference);
-    //        yield return new WaitForSeconds(1);
-    //        kiraAni.NextSprite(currentFoodsPreference);
-    //        yield return new WaitForSeconds(1);
-    //    }
-
-    //    if(currentFoodsPreference == KiraritchiFoodPreferences.Preferences.Œ™‚¢)
-    //    {
-
-    //    }
-    //}
 }

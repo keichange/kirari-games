@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: "KeiYuri_\u30EF\u30AB\u30E1\u30B5\u30E9\u30C0"
   m_EditorClassIdentifier: 
   foodsName: 16
-  sprite: {fileID: 21300000, guid: 9618d0bc8fec1b14db5c054f3fcea485, type: 3}
+  sprites:
+  - {fileID: 21300000, guid: 9618d0bc8fec1b14db5c054f3fcea485, type: 3}
+  - {fileID: 21300000, guid: 50b94f99f1d321d47a11879f2c891834, type: 3}
+  - {fileID: 21300000, guid: 842382ce932aaeb4d963a03461e88c60, type: 3}
   price: 48

@@ -70,13 +70,14 @@ public class KeiYuri_Fo_KiraritchiAnimation : MonoBehaviour
                 StartHatedAnimation();
                 break;
             case KiraritchiFoodPreferences.Preferences.çDÇ´:
+                gameObject.SetActive(false);
                 StartChouYorokobiAnimation();
                 break;
             case KiraritchiFoodPreferences.Preferences.ïÅí :
+                gameObject.SetActive(false);
                 StartYorokobiAnimation();
                 break;
         }
-        gameObject.SetActive(false);
     }
 
     private void StartHatedAnimation()
