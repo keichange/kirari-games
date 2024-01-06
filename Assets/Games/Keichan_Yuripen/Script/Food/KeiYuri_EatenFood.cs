@@ -12,7 +12,7 @@ public class KeiYuri_EatenFood : MonoBehaviour
     System.Random r = new System.Random();
 
     private int countryMomsRandNum;
-    private int isCountryMom;
+    private bool isCountryMom;
     // Start is called before the first frame update
     void Awake()
     {
@@ -33,18 +33,18 @@ public class KeiYuri_EatenFood : MonoBehaviour
         }
         if(food == FoodSettings.Foods.カントリーマアム)
         {
-            isCountryMom = 1;
+            isCountryMom = true;
             countryMomsRandNum = r.Next(2);
         } else
         {
-            isCountryMom = 0;
+            isCountryMom = false;
         }
 
     }
 
     public void ChangeSprite(int n)
     {
-        if (countryMomsRandNum == 0) n += 1; else n += 4;
+        if (isCountryMom) if (countryMomsRandNum == 0) n += 1; else n += 4;
         sr.sprite = currentFoodData.sprites[n];
     }
 }

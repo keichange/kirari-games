@@ -14,6 +14,9 @@ public class KeiYuri_Fo_KiraritchiAnimation : MonoBehaviour
     private Sprite[] hatedSprites;
     [SerializeField]
     private Sprite[] normalSprites;
+    [SerializeField]
+    private Sprite sitSprite;
+
     private KiraritchiFoodPreferences.Preferences preferences;
     [SerializeField]
     private GameObject YorokobiKiraritchi;
@@ -41,7 +44,6 @@ public class KeiYuri_Fo_KiraritchiAnimation : MonoBehaviour
 
     IEnumerator EatingAnimation()
     {
-        foodScript.SetFood(em.currentFood);
         foodScript.ChangeSprite(0);
         preferences = em.currentFoodsPreference;
         for (int i = 0; i < 3; i++)
@@ -74,8 +76,7 @@ public class KeiYuri_Fo_KiraritchiAnimation : MonoBehaviour
                 StartChouYorokobiAnimation();
                 break;
             case KiraritchiFoodPreferences.Preferences.•’Ê:
-                gameObject.SetActive(false);
-                StartYorokobiAnimation();
+                spriteRenderer.sprite = sitSprite;
                 break;
         }
     }

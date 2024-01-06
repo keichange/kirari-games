@@ -6,7 +6,20 @@ public class KeiYuri_ChefSceneManager : MonoBehaviour
 {
     [SerializeField]
     private KeiYuri_RestaurantManager rm;
-    // Start is called before the first frame update
+    [SerializeField]
+    private GameObject kiraritchi;
+    [SerializeField]
+    private GameObject tamatomo;
+    [SerializeField]
+    private KeiYuri_TamatomoManager tm;
+
+    private void OnEnable()
+    {
+        bool isTamatomo = tm.currentTamatomo != Tamatomo.Tamatomos.None;
+
+        kiraritchi.SetActive(!isTamatomo);
+        tamatomo.SetActive(isTamatomo);
+    }
     void Start()
     {
         

@@ -6,6 +6,7 @@ public class KeiYuri_ChouYorokobiKiraritchi : MonoBehaviour
 {
     private SpriteRenderer sr;
     public float[] posYs;
+    public float jumpHeight;
     public Sprite[] sprites;
     public float waitTime;
 
@@ -17,13 +18,15 @@ public class KeiYuri_ChouYorokobiKiraritchi : MonoBehaviour
 
     IEnumerator Yorokobi()
     {
-        int n = 0;
+        int n = 1;
+        sr.sprite = sprites[0];
         while (true)
         {
-            sr.sprite = sprites[n];
-            transform.position = new Vector2(transform.position.x, posYs[n]);
-            n = (n+1) % sprites.Length;
             yield return new WaitForSeconds(waitTime);
+            sr.sprite = sprites[n];
+            transform.position = new Vector2(transform.position.x, transform.position.y + jumpHeight);
+            n = (n+1) % sprites.Length;
+            jumpHeight *= -1;
         }
     }
 }
