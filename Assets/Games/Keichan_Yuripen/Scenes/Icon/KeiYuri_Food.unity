@@ -1293,6 +1293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rm: {fileID: 1959793763}
+  kd: {fileID: 11400000, guid: 702cb53bc7fe5e044b91a5b1e049f2ec, type: 2}
   UI: {fileID: 424269071}
   FoodImage: {fileID: 166901286}
   FoodName: {fileID: 1611603824}

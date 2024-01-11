@@ -5,10 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TamatomoManager")]
 public class KeiYuri_TamatomoManager : ScriptableObject
 {
-    public Tamatomo.Tamatomos currentTamatomo = Tamatomo.Tamatomos.None;
+    public KeiYuri_TamatomoData currentTamatomo = null;
     public KeiYuri_TamatomoData[] tamatomoDatas;
     public bool isEatingAvailable;
     public bool isOdekakeAvailable;
+
+    public void SetRandomTamatomo()
+    {
+        currentTamatomo = tamatomoDatas[Random.Range(0, tamatomoDatas.Length)];
+    }
 }
 
 [System.Serializable]
