@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class InviteTamatomo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private KeiYuri_TamatomoManager tm;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    private GameObject tamatomoObject;
+
+    public void Invite()
     {
-        
+        //tm.tamatomoDatas[Random.Range(0, tm.tamatomoDatas.Length)]
     }
 }

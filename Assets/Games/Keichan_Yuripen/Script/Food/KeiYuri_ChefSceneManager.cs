@@ -15,7 +15,7 @@ public class KeiYuri_ChefSceneManager : MonoBehaviour
 
     private void OnEnable()
     {
-        bool isTamatomo = tm.currentTamatomo != Tamatomo.Tamatomos.None;
+        bool isTamatomo = tm.currentTamatomo.tamatomoName != Tamatomo.Tamatomos.None;
 
         kiraritchi.SetActive(!isTamatomo);
         tamatomo.SetActive(isTamatomo);
