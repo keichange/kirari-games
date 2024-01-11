@@ -36,6 +36,11 @@ public class KeiYuri_KiraritchiData : ScriptableObject
         kiraritchiData.money += n;
     }
 
+    public void PayMoney(int n)
+    {
+        kiraritchiData.money -= n;
+    }
+
     public void addSatietyLevel(int n)
     {
         kiraritchiData.satietyLevel = Mathf.Clamp(kiraritchiData.satietyLevel + n, 0, 4);

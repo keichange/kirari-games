@@ -39,7 +39,7 @@ public class KeiYuri_EatingManager : MonoBehaviour
         currentFood = rm.foods[rm.currentFood].foodsName;
         foodScript.SetFood(currentFood);
 
-        isKiraritchi = tm.currentTamatomo == Tamatomo.Tamatomos.None;
+        isKiraritchi = tm.currentTamatomo.tamatomoName == Tamatomo.Tamatomos.None;
         if (isKiraritchi)
         {
             currentFoodsPreference = kd.CompareFoodPreferences(currentFood);
@@ -79,7 +79,7 @@ public class KeiYuri_EatingManager : MonoBehaviour
     private void EatingTamatomo()
     {
         tamatomoObject.SetActive(true);
-        tamatomoObject.GetComponent<KeiYuri_EatingTamatomo>().EatingTamatomo(tm.currentTamatomo, currentFood);
+        tamatomoObject.GetComponent<KeiYuri_EatingTamatomo>().EatingTamatomo(tm.currentTamatomo.tamatomoName, currentFood);
     }
 
     private void Reset()
