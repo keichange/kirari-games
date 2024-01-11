@@ -12,6 +12,6 @@ public class InviteTamatomo : MonoBehaviour
 
     public void Invite()
     {
-        //tm.tamatomoDatas[Random.Range(0, tm.tamatomoDatas.Length)]
+        tm.tamatomoDatas[Random.Range(0, tm.tamatomoDatas.Length)]
     }
 }
