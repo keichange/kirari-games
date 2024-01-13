@@ -33,10 +33,8 @@ public class KeiYuri_MenuManager : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                Debug.Log(foodData.price <= kd.kiraritchiData.money);
-                if(foodData.price <= kd.kiraritchiData.money)
+                if(kd.PayMoney(foodData.price))
                 {
-                    kd.PayMoney(foodData.price);
                     rm.ChangeScene(KeiYuri_RestaurantManager.ScenesEnum.‘I‘ðŽˆ);
                 }
                 
