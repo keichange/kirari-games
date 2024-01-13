@@ -42,7 +42,7 @@ public class KeiYuri_Fo_Select : MonoBehaviour
     {
         currentButton = buttons[currentButtonNum];
         Vector3 cbPos = Camera.main.ScreenToWorldPoint(currentButton.transform.position);
-        Vector3 pos = new Vector3(x, cbPos.y, 0);
+        Vector3 pos = new Vector3(x, cbPos.y, -11);
         transform.position = pos;
     }
 

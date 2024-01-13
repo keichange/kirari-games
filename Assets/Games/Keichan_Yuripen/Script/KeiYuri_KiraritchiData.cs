@@ -36,9 +36,14 @@ public class KeiYuri_KiraritchiData : ScriptableObject
         kiraritchiData.money += n;
     }
 
-    public void PayMoney(int n)
+    public bool PayMoney(int n)
     {
-        kiraritchiData.money -= n;
+        if (kiraritchiData.money > n)
+        {
+            kiraritchiData.money -= n;
+            return true;
+        }
+        return false;
     }
 
     public void addSatietyLevel(int n)
