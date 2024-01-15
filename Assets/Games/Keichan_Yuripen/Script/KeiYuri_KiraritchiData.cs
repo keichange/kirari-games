@@ -38,7 +38,7 @@ public class KeiYuri_KiraritchiData : ScriptableObject
 
     public bool PayMoney(int n)
     {
-        if (kiraritchiData.money > n)
+        if (kiraritchiData.money >= n)
         {
             kiraritchiData.money -= n;
             return true;

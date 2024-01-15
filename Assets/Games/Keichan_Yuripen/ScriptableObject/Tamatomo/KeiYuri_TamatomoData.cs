@@ -25,7 +25,6 @@ public class KeiYuri_TamatomoData : ScriptableObject
     public int tamatomoSeal;
 
     public bool isEatingAvairable = true;
-    public bool isOdekakeAvairable = true;
 
     public void Invite()
     {
@@ -40,11 +39,6 @@ public class KeiYuri_TamatomoData : ScriptableObject
     public void Leave()
     {
         isEatingAvairable = true;
-    }
-
-    public bool IsLeave()
-    {
-        return !isEatingAvairable && !isOdekakeAvairable || true;
     }
 
     public Preferences Eat(FoodSettings.Foods food)
@@ -66,13 +60,11 @@ public class KeiYuri_TamatomoData : ScriptableObject
     private void ChangeCount(int num)
     {
         count += num;
-        if(count >= 3)
-        {
-            tamatomoSeal += 1;
-            count = 0;
-        }else if(count < 0)
-        {
-            count = 0;
-        }
+    }
+
+    public void ReceiveSeal()
+    {
+        tamatomoSeal += 1;
+        count = 0;
     }
 }

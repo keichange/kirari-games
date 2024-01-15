@@ -15,6 +15,11 @@ public class KeiYuri_TamatomoMove : MonoBehaviour
     private KeiYuri_TamatomoData currentTamatomo;
     [SerializeField]
     private float waitTime = 1;
+
+    [SerializeField]
+    private GameObject badge;
+    [SerializeField]
+    private KeiYuri_Main_KiraritchiMove kiraritchiMove;
     private void OnEnable()
     {
         currentTamatomo = tm.currentTamatomo;
@@ -22,16 +27,40 @@ public class KeiYuri_TamatomoMove : MonoBehaviour
         {
             sr.sprite = currentTamatomo.idle;
             gameObject.SetActive(true);
-            if(currentTamatomo.IsLeave())
+            if(currentTamatomo.count == 3)
             {
-                selectIcon.enabled = false;
-                currentTamatomo.Leave();
-                tm.currentTamatomo = null;
-                StartCoroutine(LeaveAnimation());
+                ReceiveSeal();
+            }
+            else if(currentTamatomo.IsLeave())
+            {
+                LeaveTamatomo();
+                
             }
         }
         else gameObject.SetActive(false);
-        
+    }
+
+    private void ReceiveSeal()
+    {
+        badge.SetActive(true);
+        badge.GetComponent<KeiYuri_TamatomoBadge>().ReceiveBadge(tm.currentTamatomo.tamatomoSeal);
+        currentTamatomo.ReceiveSeal();
+        StartCoroutine(ReceiveSealAnimation());
+        kiraritchiMove.Yorokobi(3);
+    }
+
+    IEnumerator ReceiveSealAnimation()
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            for(int j = 0; j < 2; j++)
+            {
+                sr.sprite = currentTamatomo.yorokobiSprites[j];
+                yield return new WaitForSeconds(waitTime);
+            }
+        }
+        badge.SetActive(false);
+        LeaveTamatomo();
     }
 
     public void Invited()
@@ -39,7 +68,6 @@ public class KeiYuri_TamatomoMove : MonoBehaviour
         currentTamatomo = tm.currentTamatomo;
         currentTamatomo.Invite();
         StartCoroutine(InvitedAnimation());
-
     }
 
     IEnumerator InvitedAnimation()
@@ -56,6 +84,14 @@ public class KeiYuri_TamatomoMove : MonoBehaviour
         sr.sprite = currentTamatomo.yorokobiSprites[1];
         yield return new WaitForSeconds(waitTime);
         sr.sprite = currentTamatomo.yorokobiSprites[0];
+    }
+
+    public void LeaveTamatomo()
+    {
+        selectIcon.enabled = false;
+        currentTamatomo.Leave();
+        tm.currentTamatomo = null;
+        StartCoroutine(LeaveAnimation());
     }
 
     IEnumerator LeaveAnimation()

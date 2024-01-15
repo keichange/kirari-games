@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: KeiYuri_KirariData
   m_EditorClassIdentifier: 
   kiraritchiData:
-    money: 4000
+    money: 998799
     satietyLevel: 2
     mood: 100
   kiraritchiDataPath: G:/Document/GitHub/kirari-games/Assets/../savefile.json
