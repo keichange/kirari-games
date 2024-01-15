@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class ShowMood : MonoBehaviour
 {
     public KeiYuri_KiraritchiData kd;
-    public Slider slider;
+    public Image Gauge;
     // Start is called before the first frame update
     void Start()
     {
-        slider = GetComponent<Slider>();
-        slider.value = kd.kiraritchiData.mood;
+        Gauge = GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Gauge.fillAmount = kd.kiraritchiData.mood / 100.0f;
+
     }
 }

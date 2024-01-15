@@ -39,7 +39,7 @@ public class KeiYuri_EatingManager : MonoBehaviour
         currentFood = rm.foods[rm.currentFood].foodsName;
         foodScript.SetFood(currentFood);
 
-        isKiraritchi = tm.currentTamatomo.tamatomoName == Tamatomo.Tamatomos.None;
+        isKiraritchi = tm.currentTamatomo == null;
         if (isKiraritchi)
         {
             currentFoodsPreference = kd.CompareFoodPreferences(currentFood);

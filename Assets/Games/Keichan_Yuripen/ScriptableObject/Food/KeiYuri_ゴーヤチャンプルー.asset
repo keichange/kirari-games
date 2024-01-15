@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a8e87e93c5892489fe0e1c93000a6e, type: 3}
+  m_Name: "KeiYuri_\u30B4\u30FC\u30E4\u30C1\u30E3\u30F3\u30D7\u30EB\u30FC"
+  m_EditorClassIdentifier: 
+  foodsName: 18
+  sprites:
+  - {fileID: 21300000, guid: d542960f4b0990d4e95bac8c8522704c, type: 3}
+  - {fileID: 21300000, guid: a3e43b711eda02341bb1fc3e5ce5261d, type: 3}
+  - {fileID: 21300000, guid: bde15259ba5b9c942a53e532917e8a69, type: 3}
+  price: 70

@@ -9,6 +9,9 @@ public class KeiYuri_TamatomoMove : MonoBehaviour
     [SerializeField]
     private SpriteRenderer sr;
 
+    [SerializeField]
+    private KeiYuri_SelectIcon selectIcon;
+
     private KeiYuri_TamatomoData currentTamatomo;
     [SerializeField]
     private float waitTime = 1;
@@ -21,6 +24,9 @@ public class KeiYuri_TamatomoMove : MonoBehaviour
             gameObject.SetActive(true);
             if(currentTamatomo.IsLeave())
             {
+                selectIcon.enabled = false;
+                currentTamatomo.Leave();
+                tm.currentTamatomo = null;
                 StartCoroutine(LeaveAnimation());
             }
         }
@@ -31,6 +37,7 @@ public class KeiYuri_TamatomoMove : MonoBehaviour
     public void Invited()
     {
         currentTamatomo = tm.currentTamatomo;
+        currentTamatomo.Invite();
         StartCoroutine(InvitedAnimation());
 
     }
@@ -67,6 +74,7 @@ public class KeiYuri_TamatomoMove : MonoBehaviour
         transform.position = new Vector2(2.5f, 3.5f);
         yield return new WaitForSeconds(waitTime);
 
-        currentTamatomo = null;
+        gameObject.SetActive(false);
+        selectIcon.enabled = true;
     }
 }
