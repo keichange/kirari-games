@@ -42,6 +42,11 @@ public class KeiYuri_TamatomoData : ScriptableObject
         isEatingAvairable = true;
     }
 
+    public bool IsLeave()
+    {
+        return !isEatingAvairable && !isOdekakeAvairable || true;
+    }
+
     public Preferences Eat(FoodSettings.Foods food)
     {
         isEatingAvairable = false;
