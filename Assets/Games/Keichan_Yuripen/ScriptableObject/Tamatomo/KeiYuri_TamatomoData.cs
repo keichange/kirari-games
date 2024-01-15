@@ -19,6 +19,7 @@ public class KeiYuri_TamatomoData : ScriptableObject
     public Sprite[] eatingSpriteNormal;
     public Sprite[] eatingSpriteFavorite;
     public Sprite[] eatingSpriteHated;
+    public Sprite[] drunkSprite;
 
     public int count;
     public int tamatomoSeal;
@@ -29,12 +30,16 @@ public class KeiYuri_TamatomoData : ScriptableObject
     public void Invite()
     {
         isEatingAvairable = true;
-        isOdekakeAvairable = true;
     }
 
     public bool IsLeave()
     {
-        return !isEatingAvairable && !isOdekakeAvairable || true;
+        return !isEatingAvairable;
+    }
+
+    public void Leave()
+    {
+        isEatingAvairable = true;
     }
 
     public Preferences Eat(FoodSettings.Foods food)

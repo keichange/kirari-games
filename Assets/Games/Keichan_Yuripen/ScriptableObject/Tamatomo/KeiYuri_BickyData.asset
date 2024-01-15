@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bbff5a4a101c9847a10a4827ce21398, type: 3}
-  m_Name: New Kei Yuri_Tamatomo Data
+  m_Name: KeiYuri_BickyData
   m_EditorClassIdentifier: 
-  tamatomoName: 0
-  favoriteFood: 0
+  tamatomoName: 2
+  favoriteFood: 17
   hatedFood: 0
   idle: {fileID: 0}
   sit: {fileID: 0}

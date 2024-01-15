@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class KeiYuri_ShowOnaka : MonoBehaviour
 {
-    public Image[] onakas;
+    public SpriteRenderer[] onakas;
     public Sprite[] manpukuImages;
     public Sprite[] kuuhukuImages;
     public KeiYuri_KiraritchiData kd;

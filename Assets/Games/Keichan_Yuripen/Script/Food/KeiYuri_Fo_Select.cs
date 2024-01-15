@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KeiYuri_Fo_Select : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class KeiYuri_Fo_Select : MonoBehaviour
             MoveCursor();
         }
         if(Input.GetKeyDown(KeyCode.DownArrow)) Select();
+        if (Input.GetKeyDown(KeyCode.RightArrow)) Back();
 
     }
 
@@ -49,5 +51,10 @@ public class KeiYuri_Fo_Select : MonoBehaviour
     private void Select()
     {
         buttons[currentButtonNum].GetComponent<KeiYuri_SelectEvent>().OnSelected();
+    }
+
+    private void Back()
+    {
+        SceneManager.LoadScene("KeiYuri_main");
     }
 }
