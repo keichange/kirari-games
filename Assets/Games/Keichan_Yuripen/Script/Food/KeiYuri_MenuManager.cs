@@ -59,6 +59,6 @@ public class KeiYuri_MenuManager : MonoBehaviour
     }
     private void Back()
     {
-        SceneManager.LoadScene("KeiYuri_main");
+        GetComponent<KeiYuri_ChangeScene>().ChangeScene();
     }
 }

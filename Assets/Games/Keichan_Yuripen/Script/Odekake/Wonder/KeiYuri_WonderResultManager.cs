@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KeiYuri_WonderResultManager : MonoBehaviour
 {
+    [SerializeField] private KeiYuri_KiraritchiData kd;
     public KeiYuri_GameSettings gs;
     private WonderSettings ws;
     public GameObject[] objs;
@@ -11,6 +12,7 @@ public class KeiYuri_WonderResultManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        kd.addSatietyLevel(-1);
         ws = gs.wonder;
         if (ws.point == 12)
         {

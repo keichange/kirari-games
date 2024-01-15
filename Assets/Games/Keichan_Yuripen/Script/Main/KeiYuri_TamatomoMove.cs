@@ -22,16 +22,16 @@ public class KeiYuri_TamatomoMove : MonoBehaviour
     private KeiYuri_Main_KiraritchiMove kiraritchiMove;
     [SerializeField]
     private KeiYuri_BecomeTamatomo becomeTamatomo;
-    private void OnEnable()
+    private void Start()
     {
         currentTamatomo = tm.currentTamatomo;
         if(currentTamatomo != null )
         {
             sr.sprite = currentTamatomo.idle;
             gameObject.SetActive(true);
-            if (!currentTamatomo.isTamatomo)
+            if (!currentTamatomo.tData.isTamatomo)
             {
-                if (currentTamatomo.count == 3)
+                if (currentTamatomo.tData.count == 3)
                 {
                     ReceiveBadge();
                 }
@@ -49,7 +49,7 @@ public class KeiYuri_TamatomoMove : MonoBehaviour
     {
         selectIcon.enabled = false;
         badge.SetActive(true);
-        badge.GetComponent<KeiYuri_TamatomoBadge>().ReceiveBadge(tm.currentTamatomo.tamatomoBadge);
+        badge.GetComponent<KeiYuri_TamatomoBadge>().ReceiveBadge(tm.currentTamatomo.tData.tamatomoBadge);
         currentTamatomo.ReceiveBadge();
         StartCoroutine(ReceiveBadgeAnimation());
         kiraritchiMove.Yorokobi(3);
@@ -68,7 +68,7 @@ public class KeiYuri_TamatomoMove : MonoBehaviour
         sr.sprite = currentTamatomo.yorokobiSprites[0];
         badge.SetActive(false);
         selectIcon.enabled = true;
-        if (currentTamatomo.tamatomoBadge == 3) BecomeTamatomo();
+        if (currentTamatomo.tData.tamatomoBadge == 3) BecomeTamatomo();
         else if (currentTamatomo.IsLeave()) LeaveTamatomo();
     }
 

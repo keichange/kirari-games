@@ -20,11 +20,9 @@ public class KeiYuri_TamatomoData : ScriptableObject
     public Sprite[] eatingSpriteFavorite;
     public Sprite[] eatingSpriteHated;
     public Sprite[] drunkSprite;
-    public Sprite[] tamatomoSprite;
+    public Sprite[] becomeTamatomoSprite;
 
-    public int count;
-    public int tamatomoBadge;
-    public bool isTamatomo = false;
+    public TamatomoData tData;
 
     public bool isEatingAvairable = true;
 
@@ -45,7 +43,7 @@ public class KeiYuri_TamatomoData : ScriptableObject
 
     public void BecomeTamatomo()
     {
-        isTamatomo = true;
+        tData.isTamatomo = true;
     }
 
     public Preferences Eat(FoodSettings.Foods food)
@@ -66,12 +64,20 @@ public class KeiYuri_TamatomoData : ScriptableObject
 
     private void ChangeCount(int num)
     {
-        if(isTamatomo) count += num;
+        if(!tData.isTamatomo) tData.count += num;
     }
 
     public void ReceiveBadge()
     {
-        tamatomoBadge += 1;
-        count = 0;
+        tData.tamatomoBadge += 1;
+        tData.count = 0;
     }
+}
+
+[System.Serializable]
+public class TamatomoData
+{
+    public int count;
+    public int tamatomoBadge;
+    public bool isTamatomo = false;
 }

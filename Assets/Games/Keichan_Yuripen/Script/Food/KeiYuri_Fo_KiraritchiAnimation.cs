@@ -5,17 +5,14 @@ using UnityEngine;
 public class KeiYuri_Fo_KiraritchiAnimation : MonoBehaviour
 {
     private int currentSpriteNum;
-    [SerializeField]
-    private KeiYuri_EatingManager em;
+    [SerializeField] private KeiYuri_EatingManager em;
     public SpriteRenderer spriteRenderer;
-    [SerializeField]
-    private Sprite[] favoriteSprites;
-    [SerializeField]
-    private Sprite[] hatedSprites;
-    [SerializeField]
-    private Sprite[] normalSprites;
-    [SerializeField]
-    private Sprite sitSprite;
+    [SerializeField] private Sprite[] favoriteSprites;
+    [SerializeField] private Sprite[] hatedSprites;
+    [SerializeField] private Sprite[] normalSprites;
+    [SerializeField] private Sprite[] drunkSprites;
+    private Sprite[] animationSprites;
+    [SerializeField] private Sprite sitSprite;
 
     private KiraritchiFoodPreferences.Preferences preferences;
     [SerializeField]
@@ -46,24 +43,37 @@ public class KeiYuri_Fo_KiraritchiAnimation : MonoBehaviour
     {
         foodScript.ChangeSprite(0);
         preferences = em.currentFoodsPreference;
-        for (int i = 0; i < 3; i++)
+        if (em.currentFood == FoodSettings.Foods.“ú–{Žð)
         {
-            for(int j = 0; j < 2; j++)
+            foreach (Sprite sprite in drunkSprites)
             {
-                switch (preferences)
-                {
-                    case KiraritchiFoodPreferences.Preferences.D‚«:
-                        spriteRenderer.sprite = favoriteSprites[j];
-                        break;
-                    case KiraritchiFoodPreferences.Preferences.Œ™‚¢:
-                        spriteRenderer.sprite = hatedSprites[j];
-                        break;
-                    case KiraritchiFoodPreferences.Preferences.•’Ê:
-                        spriteRenderer.sprite = normalSprites[j];
-                        break;
-                }
+                spriteRenderer.sprite = sprite;
                 yield return new WaitForSeconds(1);
-                foodScript.ChangeSprite(i);
+            }
+        }
+        else
+        {
+            switch (preferences)
+            {
+                case KiraritchiFoodPreferences.Preferences.D‚«:
+                    animationSprites = favoriteSprites;
+                    break;
+                case KiraritchiFoodPreferences.Preferences.Œ™‚¢:
+                    animationSprites = hatedSprites;
+                    break;
+                case KiraritchiFoodPreferences.Preferences.•’Ê:
+                    animationSprites = normalSprites;
+                    break;
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    spriteRenderer.sprite = animationSprites[j];
+                    yield return new WaitForSeconds(1);
+                    foodScript.ChangeSprite(i);
+                }
             }
         }
         switch(preferences)

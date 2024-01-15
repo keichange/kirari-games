@@ -32,14 +32,14 @@ public class KeiYuri_BecomeTamatomo : MonoBehaviour
         {
             for(int j = 0; j < 2; j++)
             {
-                sr.sprite = tm.currentTamatomo.tamatomoSprite[j];
+                sr.sprite = tm.currentTamatomo.becomeTamatomoSprite[j];
                 yield return new WaitForSeconds(1);
             }
         }
         bool isClear = true;
         foreach(KeiYuri_TamatomoData tamatomoData in tm.tamatomoDatas)
         {
-            if (!tamatomoData.isTamatomo)
+            if (!tamatomoData.tData.isTamatomo)
             {
                 isClear = false;
                 break;
