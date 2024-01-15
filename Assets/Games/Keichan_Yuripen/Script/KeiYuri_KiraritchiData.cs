@@ -68,6 +68,11 @@ public class KeiYuri_KiraritchiData : ScriptableObject
         
     }
 
+    public bool DoseLeaving()
+    {
+        return kiraritchiData.mood <= 0;
+    }
+
     public Preferences CompareFoodPreferences(FoodSettings.Foods food)
     {
         if (CompareFoods(food, kiraritchiFoodPreferences.favoriteFoods))
