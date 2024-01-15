@@ -22,7 +22,7 @@ public class KeiYuri_TamatomoData : ScriptableObject
     public Sprite[] drunkSprite;
 
     public int count;
-    public int tamatomoSeal;
+    public int tamatomoBadge;
 
     public bool isEatingAvairable = true;
 
@@ -62,9 +62,9 @@ public class KeiYuri_TamatomoData : ScriptableObject
         count += num;
     }
 
-    public void ReceiveSeal()
+    public void ReceiveBadge()
     {
-        tamatomoSeal += 1;
+        tamatomoBadge += 1;
         count = 0;
     }
 }
