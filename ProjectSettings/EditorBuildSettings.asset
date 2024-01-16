@@ -48,9 +48,15 @@ EditorBuildSettings:
     path: Assets/Games/Lily/Scenes/Lily.unity
     guid: 6aec36298f6edc84dae0f58e0855b2fc
   - enabled: 1
-    path: Assets/Games/Bicky/Scenes/Bicky.unity
+    path: Assets/Games/Bicky/Scenes/Bicky_Game.unity
     guid: 211a827ca6e6c20448b9f58d4e66d358
   - enabled: 1
     path: Assets/Games/Sotoumi/Scene/Sotoumi.unity
     guid: 254fc603fd2643843baa8488b749e3b0
+  - enabled: 1
+    path: Assets/Games/Bicky/Scenes/Bicky_Start.unity
+    guid: 2aa412cff95cb5b48b3b3e8fbb7d83cc
+  - enabled: 1
+    path: Assets/Games/Bicky/Scenes/Bicky_Clear.unity
+    guid: da47a05d12f3fae468737bda881856b8
   m_configObjects: {}
