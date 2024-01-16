@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using System.IO;
 
 
-public class GameManager : MonoBehaviour
+public class GameInitializer : MonoBehaviour
 {
     public KeiYuri_KiraritchiData kd;
     // Start is called before the first frame update
