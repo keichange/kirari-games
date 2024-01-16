@@ -12,19 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbff5a4a101c9847a10a4827ce21398, type: 3}
   m_Name: KeiYuri_HiroppeData
   m_EditorClassIdentifier: 
-  tamatomoName: 0
-  favoriteFood: 0
-  hatedFood: 0
-  idle: {fileID: 0}
-  sit: {fileID: 0}
-  yorokobiSprites: []
-  happySprites: []
-  angrySprites: []
-  eatingSpriteNormal: []
-  eatingSpriteFavorite: []
-  eatingSpriteHated: []
-  drunkSprite: []
-  count: 0
-  tamatomoSeal: 0
+  tamatomoName: 5
+  favoriteFood: 2
+  hatedFood: 19
+  idle: {fileID: 21300000, guid: fc170cf1008fee547b0094bbd57264d4, type: 3}
+  sit: {fileID: 21300000, guid: 983b9c3150f9c2744b2e535297ed66d1, type: 3}
+  yorokobiSprites:
+  - {fileID: 21300000, guid: fc170cf1008fee547b0094bbd57264d4, type: 3}
+  - {fileID: 21300000, guid: 57bf28d7798d3e84d91623750a6e62fd, type: 3}
+  happySprites:
+  - {fileID: 21300000, guid: fc170cf1008fee547b0094bbd57264d4, type: 3}
+  - {fileID: 21300000, guid: 362cac961ebec1d4fa4e7c8a7a346748, type: 3}
+  angrySprites:
+  - {fileID: 21300000, guid: fc170cf1008fee547b0094bbd57264d4, type: 3}
+  - {fileID: 21300000, guid: fc170cf1008fee547b0094bbd57264d4, type: 3}
+  eatingSpriteNormal:
+  - {fileID: 21300000, guid: 983b9c3150f9c2744b2e535297ed66d1, type: 3}
+  - {fileID: 21300000, guid: 0ad9ed1d5a614f640875f23776930764, type: 3}
+  eatingSpriteFavorite:
+  - {fileID: 21300000, guid: 04b8dced1b0fd194a938242c03746ae1, type: 3}
+  - {fileID: 21300000, guid: 8791c39a1f401f04da59868d67afb681, type: 3}
+  eatingSpriteHated:
+  - {fileID: 0}
+  - {fileID: 0}
+  drunkSprite:
+  - {fileID: 21300000, guid: 983b9c3150f9c2744b2e535297ed66d1, type: 3}
+  - {fileID: 21300000, guid: 0ad9ed1d5a614f640875f23776930764, type: 3}
+  - {fileID: 21300000, guid: 983b9c3150f9c2744b2e535297ed66d1, type: 3}
+  - {fileID: 21300000, guid: 0ad9ed1d5a614f640875f23776930764, type: 3}
+  becomeTamatomoSprite:
+  - {fileID: 21300000, guid: 0dfb6d4fa0283fb47a918acffed9bdff, type: 3}
+  - {fileID: 21300000, guid: 78c04cb9742121c428378123f704b418, type: 3}
+  tData:
+    count: 0
+    tamatomoBadge: 0
+    isTamatomo: 0
   isEatingAvairable: 1
-  isOdekakeAvairable: 1

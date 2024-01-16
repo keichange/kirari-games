@@ -40,10 +40,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: da5dcc48e3f1d334b897bfd9a5770081, type: 3}
   - {fileID: 21300000, guid: 5c740e6d08e5b094d80561e471af482c, type: 3}
   - {fileID: 21300000, guid: 906585f75bf92714a922bfdb7535ff4c, type: 3}
-  tamatomoSprite:
+  becomeTamatomoSprite:
   - {fileID: 21300000, guid: 6414d235def3db24baeb26beb36dce03, type: 3}
   - {fileID: 21300000, guid: e17809b8b3297b542a19ef9a1ab95bbf, type: 3}
-  count: 0
-  tamatomoBadge: 3
-  isTamatomo: 1
+  tData:
+    count: 3
+    tamatomoBadge: 0
+    isTamatomo: 0
   isEatingAvairable: 1

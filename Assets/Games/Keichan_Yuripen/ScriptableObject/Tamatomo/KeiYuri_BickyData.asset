@@ -14,16 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tamatomoName: 2
   favoriteFood: 17
-  hatedFood: 0
-  idle: {fileID: 0}
-  sit: {fileID: 0}
-  yorokobiSprites: []
-  happySprites: []
-  angrySprites: []
-  eatingSpriteNormal: []
-  eatingSpriteFavorite: []
-  eatingSpriteHated: []
-  count: 0
-  tamatomoSeal: 0
+  hatedFood: 18
+  idle: {fileID: 21300000, guid: 94a43d9f968cfa242b7bec349b68eb3d, type: 3}
+  sit: {fileID: 21300000, guid: ce8bbaf686295c84da73daa9b42e516a, type: 3}
+  yorokobiSprites:
+  - {fileID: 21300000, guid: 94a43d9f968cfa242b7bec349b68eb3d, type: 3}
+  - {fileID: 21300000, guid: 37502ed49413f84438be2800e13cca8d, type: 3}
+  happySprites:
+  - {fileID: 21300000, guid: 94a43d9f968cfa242b7bec349b68eb3d, type: 3}
+  - {fileID: 21300000, guid: acb241b313397024e8130a20d233bdaa, type: 3}
+  angrySprites:
+  - {fileID: 21300000, guid: 204fabf42ba2ad041a5df51952d6e21a, type: 3}
+  - {fileID: 21300000, guid: fc7fabbc8b710f144891f764bf4ed176, type: 3}
+  eatingSpriteNormal:
+  - {fileID: 21300000, guid: 83416ed44fb6d6b4598e18961c47e96e, type: 3}
+  - {fileID: 21300000, guid: 49709ca5a07953649bb3dc7f404f1fdd, type: 3}
+  eatingSpriteFavorite:
+  - {fileID: 21300000, guid: 340172f9e3ad00449aeee2083643a843, type: 3}
+  - {fileID: 21300000, guid: dbfd8f01d36533e4f8241e733ccb1a71, type: 3}
+  eatingSpriteHated:
+  - {fileID: 21300000, guid: 148ab9b2ad0884a49ba3cd090576cd8a, type: 3}
+  - {fileID: 21300000, guid: 5af647a1a155b2242b58fad3215980bd, type: 3}
+  drunkSprite:
+  - {fileID: 21300000, guid: ce8bbaf686295c84da73daa9b42e516a, type: 3}
+  - {fileID: 21300000, guid: 4d8515850ac39d34b9bea3897a44031b, type: 3}
+  - {fileID: 21300000, guid: 847ed09b46e18144297fa2a7812c84b6, type: 3}
+  - {fileID: 21300000, guid: d52aa028ec341db448c9b819c3c35b66, type: 3}
+  becomeTamatomoSprite:
+  - {fileID: 21300000, guid: 2ba3b16fca40bf14a856ba113fbe6cd9, type: 3}
+  - {fileID: 21300000, guid: 8ed093bc0609e2a48812e7c68b72d1ab, type: 3}
+  tData:
+    count: 0
+    tamatomoBadge: 0
+    isTamatomo: 0
   isEatingAvairable: 1
-  isOdekakeAvairable: 1
