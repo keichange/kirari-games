@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - obstacle
+  - Ochimono
+  - OchimonoSample
+  - Sample
   layers:
   - Default
   - TransparentFX

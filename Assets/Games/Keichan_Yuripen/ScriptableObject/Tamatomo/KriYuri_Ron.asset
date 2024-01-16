@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbff5a4a101c9847a10a4827ce21398, type: 3}
+  m_Name: KriYuri_Ron
+  m_EditorClassIdentifier: 
+  tamatomoName: 1
+  favoriteFood: 0
+  hatedFood: 0
+  idle: {fileID: 0}
+  sit: {fileID: 0}
+  yorokobiSprites:
+  - {fileID: 21300000, guid: d784e712bb2d79343aecd7a859fc6e2d, type: 3}
+  - {fileID: 21300000, guid: 23fc3e6d17af3f549ad8d86f16d375ae, type: 3}
+  happySprites:
+  - {fileID: 21300000, guid: 23fc3e6d17af3f549ad8d86f16d375ae, type: 3}
+  - {fileID: 21300000, guid: 48cc88224187c2943b47dea4316556af, type: 3}
+  angrySprites:
+  - {fileID: 21300000, guid: d784e712bb2d79343aecd7a859fc6e2d, type: 3}
+  - {fileID: 21300000, guid: 52094e377949b5940ace6063f76f5db2, type: 3}
+  eatingSpriteNormal:
+  - {fileID: 21300000, guid: b3400f8c83f2cc74cbecd0fb673eaaed, type: 3}
+  - {fileID: 21300000, guid: b75b191b157b9954baeaa5a51cd29a67, type: 3}
+  eatingSpriteFavorite:
+  - {fileID: 21300000, guid: b3400f8c83f2cc74cbecd0fb673eaaed, type: 3}
+  - {fileID: 21300000, guid: a3ea3127cb9d96d42bd8f79484c52bab, type: 3}
+  eatingSpriteHated:
+  - {fileID: 21300000, guid: 23c1a2832ec594e419a124c99444c1a5, type: 3}
+  - {fileID: 21300000, guid: 31f220872af7b464b9963b9ae6c32b83, type: 3}
+  drunkSprite:
+  - {fileID: 21300000, guid: 2e3eb57de79e25743b6aedd81f0c5a8f, type: 3}
+  - {fileID: 21300000, guid: 4f15fed86b03e9240b2d36366d9a3dba, type: 3}
+  - {fileID: 21300000, guid: 478c48278a61ae34994e8450200db7a6, type: 3}
+  - {fileID: 21300000, guid: be06f9fa22a099646923364842a5a769, type: 3}
+  becomeTamatomoSprite:
+  - {fileID: 21300000, guid: bdfe7e57e5b5be84faf97d3dc2f75b51, type: 3}
+  - {fileID: 21300000, guid: 11da382b31426264fa364d0a7c7bf2cb, type: 3}
+  tData:
+    count: 0
+    tamatomoBadge: 0
+    isTamatomo: 0
+  isEatingAvairable: 1
