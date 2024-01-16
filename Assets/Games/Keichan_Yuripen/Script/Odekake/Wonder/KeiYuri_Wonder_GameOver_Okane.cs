@@ -17,9 +17,9 @@ public class KeiYuri_Wonder_GameOver_Okane : MonoBehaviour
     {
         ws = gs.wonder;
         okane = ws.point / 3;
+        sr.sprite = imgs[okane];
         kd.addMoney(okane);
         sr = GetComponent<SpriteRenderer>();
-        sr.sprite = imgs[okane];
     }
 
     // Update is called once per frame

@@ -4714,7 +4714,7 @@ MonoBehaviour:
   tamatomoObject: {fileID: 168055195}
   inviteMenu: {fileID: 976468860891644941}
   selectIcon: {fileID: 1231790368}
-  price: 400
+  price: 100
 --- !u!222 &8924657444098462192
 CanvasRenderer:
   m_ObjectHideFlags: 0

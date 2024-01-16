@@ -44,7 +44,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6414d235def3db24baeb26beb36dce03, type: 3}
   - {fileID: 21300000, guid: e17809b8b3297b542a19ef9a1ab95bbf, type: 3}
   tData:
-    count: 3
+    count: 0
     tamatomoBadge: 0
     isTamatomo: 0
   isEatingAvairable: 1

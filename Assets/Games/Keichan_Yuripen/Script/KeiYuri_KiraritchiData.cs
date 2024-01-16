@@ -51,7 +51,10 @@ public class KeiYuri_KiraritchiData : ScriptableObject
 
     public void addMoney(int n) 
     {
-        kiraritchiData.money += n;
+        int num;
+        if (kiraritchiData.money < 3) num = 10;
+        else num = n * 50; 
+        kiraritchiData.money += num;
     }
 
     public bool PayMoney(int n)

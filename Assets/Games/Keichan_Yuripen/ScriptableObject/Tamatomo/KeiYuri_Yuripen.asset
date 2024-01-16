@@ -36,7 +36,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b0222e16bae04a04b9f4ea87fae02491, type: 3}
   - {fileID: 21300000, guid: e37ec55ef7374664f8f87ca8de3dbd66, type: 3}
   drunkSprite:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 5a807cbf09eeb404bafac92e471f7767, type: 3}
+  - {fileID: 21300000, guid: a70574d847d99d2448fdda6164240508, type: 3}
+  - {fileID: 21300000, guid: 9f31146ba966c1042a13af6b23f8f0cd, type: 3}
+  - {fileID: 21300000, guid: 565f5227a7667e54899ad44e8c1f9fc7, type: 3}
   becomeTamatomoSprite:
   - {fileID: 21300000, guid: 5a807cbf09eeb404bafac92e471f7767, type: 3}
   - {fileID: 21300000, guid: a70574d847d99d2448fdda6164240508, type: 3}
