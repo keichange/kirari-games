@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: KeiYuri_KirariData
   m_EditorClassIdentifier: 
   kiraritchiData:
-    money: 3000
-    satietyLevel: 4
-    mood: 30
-  kiraritchiDataPath: "G:/\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8/GitHub/kirari-games/Assets/../savefile.json"
+    money: 998011
+    satietyLevel: 1
+    mood: 0
+  kiraritchiDataPath: G:/Document/GitHub/kirari-games/Assets/../savefile.json
   kiraritchiFoodPreferences:
     favoriteFoods: 000000000300000004000000
     hatedFoods: 0f0000001000000001000000

@@ -40,7 +40,7 @@ public class KeiYuri_EatingTamatomo : MonoBehaviour
 
     public void EatingTamatomo(Tamatomos currentTamatomoName, Foods currentFood)
     {
-        currentTamatomo = SearchTamatomo(currentTamatomoName);
+        currentTamatomo = tm.currentTamatomo;
         preference = currentTamatomo.Eat(currentFood);
         switch (preference)
         {

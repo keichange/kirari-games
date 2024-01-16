@@ -68,6 +68,8 @@ public class FoodSettings
         カレー,
         キノコ料理,
         ワカメサラダ,
-        サーモン
+        サーモン,
+        ゴーヤチャンプルー,
+        None
     }
 }

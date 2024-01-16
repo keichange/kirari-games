@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -39,6 +40,7 @@ public class KeiYuri_MenuManager : MonoBehaviour
                 }
                 
             }
+            if (Input.GetKeyDown(KeyCode.RightArrow)) Back();
         }
     }
 
@@ -54,5 +56,9 @@ public class KeiYuri_MenuManager : MonoBehaviour
     private void NextFood()
     {
         rm.NextFood();
+    }
+    private void Back()
+    {
+        GetComponent<KeiYuri_ChangeScene>().ChangeScene();
     }
 }

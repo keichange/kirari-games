@@ -30,16 +30,13 @@ public class KeiYuri_EatingManager : MonoBehaviour
     private KeiYuri_TamatomoManager tm;
 
     private bool isKiraritchi;
-
-    [SerializeField]
-    private string mainSceneName;
     // Start is called before the first frame update
     void OnEnable()
     {
         currentFood = rm.foods[rm.currentFood].foodsName;
         foodScript.SetFood(currentFood);
 
-        isKiraritchi = tm.currentTamatomo.tamatomoName == Tamatomo.Tamatomos.None;
+        isKiraritchi = tm.currentTamatomo == null;
         if (isKiraritchi)
         {
             currentFoodsPreference = kd.CompareFoodPreferences(currentFood);
@@ -62,7 +59,7 @@ public class KeiYuri_EatingManager : MonoBehaviour
             {
                 Reset();
                 if (isKiraritchi) rm.ChangeScene(KeiYuri_RestaurantManager.ScenesEnum.êHÇ◊ï®ÉÅÉjÉÖÅ[);
-                else SceneManager.LoadScene(mainSceneName);
+                else GetComponent<KeiYuri_ChangeScene>().ChangeScene();
             }
         }
     }

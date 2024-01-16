@@ -371,6 +371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 134287575}
   - component: {fileID: 134287574}
+  - component: {fileID: 134287576}
   m_Layer: 0
   m_Name: EatingManager
   m_TagString: Untagged
@@ -400,7 +401,6 @@ MonoBehaviour:
   kiraritchiInitiarizer: {fileID: 131207290}
   tamatomoObject: {fileID: 633885339}
   tm: {fileID: 11400000, guid: 15b39b34c157c2743b6f7f9bf67bf5e7, type: 2}
-  mainSceneName: keiYuri_main
 --- !u!4 &134287575
 Transform:
   m_ObjectHideFlags: 0
@@ -416,6 +416,20 @@ Transform:
   m_Father: {fileID: 257226851}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &134287576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134287573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae89b35732958724889737552c28e362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: keiYuri_main
+  kd: {fileID: 11400000, guid: 702cb53bc7fe5e044b91a5b1e049f2ec, type: 2}
 --- !u!1 &151921215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 565105952}
   - component: {fileID: 565105953}
+  - component: {fileID: 565105954}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -1298,6 +1313,20 @@ MonoBehaviour:
   FoodImage: {fileID: 166901286}
   FoodName: {fileID: 1611603824}
   FoodPrice: {fileID: 1874311264}
+--- !u!114 &565105954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565105951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae89b35732958724889737552c28e362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: KeiYuri_main
+  kd: {fileID: 11400000, guid: 702cb53bc7fe5e044b91a5b1e049f2ec, type: 2}
 --- !u!1 &595744806
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,6 +3237,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c1a02ac6a0b63e4882d2038743564b5, type: 2}
   - {fileID: 11400000, guid: 093a605dc496df7408a386c5aa1ab355, type: 2}
   - {fileID: 11400000, guid: a94ecad0115762b40a90bb7df36e5f14, type: 2}
+  - {fileID: 11400000, guid: 2f56b64983347aa40bce9db5efea1527, type: 2}
   scenes:
   - {fileID: 523093327}
   - {fileID: 332214450}
@@ -3417,6 +3447,10 @@ PrefabInstance:
       propertyPath: foodScript
       value: 
       objectReference: {fileID: 378776974}
+    - target: {fileID: 1578611203847095919, guid: f704a91c6bfc4ab46a317b22e9f9ee0f, type: 3}
+      propertyPath: drunkSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2089644124435493265, guid: f704a91c6bfc4ab46a317b22e9f9ee0f, type: 3}
       propertyPath: m_Name
       value: EatingKiraritchi

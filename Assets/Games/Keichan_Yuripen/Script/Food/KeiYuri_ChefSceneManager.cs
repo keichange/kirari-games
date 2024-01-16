@@ -19,6 +19,7 @@ public class KeiYuri_ChefSceneManager : MonoBehaviour
 
         kiraritchi.SetActive(!isTamatomo);
         tamatomo.SetActive(isTamatomo);
+        if(isTamatomo) tamatomo.GetComponent<SpriteRenderer>().sprite = tm.currentTamatomo.sit;
     }
     void Start()
     {
