@@ -10,6 +10,7 @@ public class KeiYuri_KiraritchiData : ScriptableObject
     public KiraritchiData kiraritchiData = new KiraritchiData();
     public string kiraritchiDataPath;
     public KiraritchiFoodPreferences kiraritchiFoodPreferences = new KiraritchiFoodPreferences();
+    [SerializeField] KeiYuri_TamatomoManager tm;
 
     private void OnEnable()
     {
@@ -18,7 +19,19 @@ public class KeiYuri_KiraritchiData : ScriptableObject
 
     public void SaveGame()
     {
-        string kiraritchiDataJson = JsonUtility.ToJson(kiraritchiData);
+        TamatomoData[] tDatas = new TamatomoData[0];
+        for (int i = 0; i < tm.tamatomoDatas.Length; i++)
+        {
+            System.Array.Resize(ref tDatas, i + 1);
+            tDatas[i] = tm.tamatomoDatas[i].tData;
+        }
+        SaveData saveData = new SaveData()
+        {
+            tds = tDatas,
+            kd = kiraritchiData
+
+        };
+        string kiraritchiDataJson = JsonUtility.ToJson(saveData);
         File.WriteAllText(kiraritchiDataPath, kiraritchiDataJson);
     }
 
@@ -26,8 +39,13 @@ public class KeiYuri_KiraritchiData : ScriptableObject
     {
         if(File.Exists(kiraritchiDataPath))
         {
-            string kiraritchiDataJson = File.ReadAllText(kiraritchiDataPath);
-            kiraritchiData = JsonUtility.FromJson<KiraritchiData>(kiraritchiDataJson);
+            string saveDataJson = File.ReadAllText(kiraritchiDataPath);
+            SaveData saveData = JsonUtility.FromJson<SaveData>(saveDataJson);
+            kiraritchiData = saveData.kd;
+            for(int i = 0; i < tm.tamatomoDatas.Length; i++)
+            {
+                tm.tamatomoDatas[i].tData = saveData.tds[i];
+            }
         }
     }
 
@@ -36,9 +54,22 @@ public class KeiYuri_KiraritchiData : ScriptableObject
         kiraritchiData.money += n;
     }
 
+    public bool PayMoney(int n)
+    {
+        if (kiraritchiData.money >= n)
+        {
+            kiraritchiData.money -= n;
+            return true;
+        }
+        return false;
+    }
+
     public void addSatietyLevel(int n)
     {
-        kiraritchiData.satietyLevel = Mathf.Clamp(kiraritchiData.satietyLevel + n, 0, 4);
+        if(kiraritchiData.satietyLevel <= 0){
+            kiraritchiData.mood -= 20;
+        }
+        else kiraritchiData.satietyLevel = Mathf.Clamp(kiraritchiData.satietyLevel + n, 0, 4);
     }
 
     public void changeMood(Preferences preferences)
@@ -56,6 +87,11 @@ public class KeiYuri_KiraritchiData : ScriptableObject
                 break;
         }
         
+    }
+
+    public bool DoseLeaving()
+    {
+        return kiraritchiData.mood <= 0;
     }
 
     public Preferences CompareFoodPreferences(FoodSettings.Foods food)
@@ -105,3 +141,9 @@ public class KiraritchiFoodPreferences
     public int normalChangeMood;
 }
 
+[System.Serializable]
+public class SaveData
+{
+    public KiraritchiData kd;
+    public TamatomoData[] tds;
+}

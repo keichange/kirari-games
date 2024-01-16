@@ -15,10 +15,11 @@ public class KeiYuri_ChefSceneManager : MonoBehaviour
 
     private void OnEnable()
     {
-        bool isTamatomo = tm.currentTamatomo != Tamatomo.Tamatomos.None;
+        bool isTamatomo = tm.currentTamatomo != null;
 
         kiraritchi.SetActive(!isTamatomo);
         tamatomo.SetActive(isTamatomo);
+        if(isTamatomo) tamatomo.GetComponent<SpriteRenderer>().sprite = tm.currentTamatomo.sit;
     }
     void Start()
     {

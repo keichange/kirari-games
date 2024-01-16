@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeiYuri_Selection : MonoBehaviour
+public class KeiYuri_SelectIcon : MonoBehaviour
 {
     private bool iconIsActive = false;
     int select = -1;
@@ -24,7 +24,7 @@ public class KeiYuri_Selection : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            icons[select].GetComponent<KeiYuri_ChangeScene>().ChangeScene();
+            icons[select].GetComponent<KeiYuri_OnSelected>().OnSelected();
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {

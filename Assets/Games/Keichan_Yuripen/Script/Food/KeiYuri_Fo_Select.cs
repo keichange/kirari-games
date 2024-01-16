@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KeiYuri_Fo_Select : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class KeiYuri_Fo_Select : MonoBehaviour
             MoveCursor();
         }
         if(Input.GetKeyDown(KeyCode.DownArrow)) Select();
+        if (Input.GetKeyDown(KeyCode.RightArrow)) Back();
 
     }
 
@@ -42,12 +44,17 @@ public class KeiYuri_Fo_Select : MonoBehaviour
     {
         currentButton = buttons[currentButtonNum];
         Vector3 cbPos = Camera.main.ScreenToWorldPoint(currentButton.transform.position);
-        Vector3 pos = new Vector3(x, cbPos.y, 0);
+        Vector3 pos = new Vector3(x, cbPos.y, -11);
         transform.position = pos;
     }
 
     private void Select()
     {
         buttons[currentButtonNum].GetComponent<KeiYuri_SelectEvent>().OnSelected();
+    }
+
+    private void Back()
+    {
+        SceneManager.LoadScene("KeiYuri_main");
     }
 }

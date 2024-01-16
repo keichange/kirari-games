@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d34572511bb82949aa0a4fe9d6c991f, type: 3}
   m_Name: KeiYuri_Tamatomo Manager
   m_EditorClassIdentifier: 
-  currentTamatomo: 0
+  currentTamatomo: {fileID: 11400000, guid: 9cbb2cfa42abf244798b080efb5c99db, type: 2}
   tamatomoDatas:
   - {fileID: 11400000, guid: e64fc520cbfca824ab1849f19e7580c9, type: 2}
+  - {fileID: 11400000, guid: 1fb30264feb78f54a90162a3fdab6067, type: 2}
+  - {fileID: 11400000, guid: 9cbb2cfa42abf244798b080efb5c99db, type: 2}
+  - {fileID: 11400000, guid: b968363ad570efc4fa6b481eca374e28, type: 2}
+  - {fileID: 11400000, guid: 490c9483da28c45479b17ebf029aed6e, type: 2}
   isEatingAvailable: 0
   isOdekakeAvailable: 0
